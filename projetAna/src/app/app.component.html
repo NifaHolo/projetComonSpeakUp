@@ -1,5 +1,6 @@
-<ul class="list-group">
-  <li *ngFor="let questions of questions; let i = index"  class="list-group-item">
-  <h1> {{questions.nom}} </h1>  <h2>>{{questions.desc}}</h2>
-  </li>
-</ul><br><br>
+  <app-navbar></app-navbar>
+<div *ngFor="let questions of questions; let i = index"  class="list-group-item">
+  <h1> {{questions.nom}} </h1> 
+  <a href="navbar/navbar.component.html">ICI MAGGLE</a>
+   <h2>>{{questions.desc}}</h2>
+  </div>

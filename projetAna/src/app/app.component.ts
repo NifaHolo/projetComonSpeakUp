@@ -6,13 +6,7 @@ import { Component } from '@angular/core';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  template: `
-    <ul>
-      <ul>
-        <li *ngFor="let test of id">bonjour {{ test.questions}}</li><br>
-      </ul>
-    </ul>
-  `
+
 })
 export class AppComponent {
   title = 'projetAna';
