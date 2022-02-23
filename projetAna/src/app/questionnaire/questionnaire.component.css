@@ -1,0 +1,28 @@
+#questionnaires{
+    width: 80%;
+    margin-top: 5%;
+    margin-left: 10%;
+    border-radius: 25px;
+    background-color: #A5BBDC;
+    border:3px solid #1E4F96;
+    padding-left: 5%;
+    color:#1E4F96;
+}
+#questionnaires p{
+    color:#1E4F96;
+}
+.title{
+    position: flex;
+    margin-top: 5%;
+    text-align: center;
+    color:#1E4F96;
+    font-weight: bold;
+    font-size: 25px;
+}
+.bar{
+    background-color:#1E4F96;
+    margin-left: 0%;
+    height: 3px;
+    border: none;
+    width: 80%;
+}

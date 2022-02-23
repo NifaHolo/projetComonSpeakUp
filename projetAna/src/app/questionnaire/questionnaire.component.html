@@ -1,0 +1,20 @@
+<div class="title">
+<h1>Questionnaire</h1>
+<h1>Langue - Anglais</h1>
+</div>
+<div id="questionnaires">
+    <span>
+        <h1>1 - Grammar</h1>
+    </span>
+    <h2>Choose the best word or phrase to fill each gap.</h2>
+    <div *ngFor="let questions of questions; let i = index" class="list-group-item">
+        <h2> {{questions.nom}} </h2>
+        <hr class="bar">
+        <h3>{{questions.grammar}}</h3>
+        <p><input type="radio">{{questions.rep1}}</p>
+        <p><input type="radio">{{questions.rep2}}</p>
+        <p><input type="radio">{{questions.rep3}}</p>
+        <p><input type="radio">{{questions.rep4}}</p>
+        <hr class="bar">
+    </div>
+</div>
