@@ -1,0 +1,45 @@
+<div class="title">
+<h1>Questionnaire</h1>
+<h1>Langue - Anglais</h1>
+</div>
+<div id="questionnaires">
+    <span>
+        <h1>1 - Grammar</h1>
+    </span>
+    <h2>Choose the best word or phrase to fill each gap.</h2>
+    <div *ngFor="let questions of questions; let i = index" class="list-group-item">
+        <form>
+            <h2> {{questions.nom}} </h2>
+            <hr class="bar">
+            <h3>{{questions.grammar}}</h3>
+            <p><input type="radio" id="rep1" name="questionnaire1" value="rep1">{{questions.rep1}}</p>
+            <p><input type="radio" id="rep2" name="questionnaire1" value="rep2">{{questions.rep2}}</p>
+            <p><input type="radio" id="rep3" name="questionnaire1" value="rep3">{{questions.rep3}}</p>
+            <p><input type="radio" id="rep4" name="questionnaire1" value="rep3">{{questions.rep4}}</p>
+            <hr class="bar">
+        </form>
+    </div>
+    <span>
+        <h1>1 - Vocab</h1>
+    </span>
+    <div *ngFor="let questions2 of questions2; let i = index" class="list-group-item">
+        <form>
+            <h2> {{questions2.nom2}} </h2>
+            <hr class="bar">
+            <h3>{{questions2.Vocab}}</h3>
+            <p><input type="radio" id="rep1" name="questionnaire1" value="rep1">{{questions2.repV1}}</p>
+            <p><input type="radio" id="rep2" name="questionnaire1" value="rep2">{{questions2.repV2}}</p>
+            <p><input type="radio" id="rep3" name="questionnaire1" value="rep3">{{questions2.repV3}}</p>
+            <p><input type="radio" id="rep4" name="questionnaire1" value="rep3">{{questions2.repV4}}</p>
+            <hr class="bar">
+        </form>
+    </div>
+    <ul class="centerbuttun">
+        <li><button id="bouttonanglais" >
+            <span>Submit !</span>
+        </button></li>
+        <li><a href="audioanglais"><button id="buttunnext" >
+            <span>Next</span>
+        </button></a></li>
+    </ul>
+</div>

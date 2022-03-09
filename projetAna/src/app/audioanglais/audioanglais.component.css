@@ -1,0 +1,137 @@
+#questionnaires {
+  width: 80%;
+  margin-top: 5%;
+  margin-left: 10%;
+  border-radius: 25px;
+  background-color: #a5bbdc;
+  border: 3px solid #1e4f96;
+  padding-left: 5%;
+  overflow: hidden;
+  color: #1e4f96;
+}
+
+#questionnaires p {
+  color: #1e4f96;
+}
+#questionnaires h1 {
+  padding-top: 100px;
+  font-size: 70px;
+}
+.title h1 {
+  font-size: 80px;
+}
+#bouttonanglais {
+  text-align: center;
+  display: inline-block;
+  background-color: #1e4f96;
+  border-radius: 10px;
+  border: 4px double #cccccc;
+  color: #eeeeee;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  margin-left: 40%;
+}
+
+#bouttonanglais span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+#bouttonanglais span:after {
+  content: "\00bb";
+  position: absolute;
+  z-index: 1;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+#bouttonanglais:hover {
+  background-color: #1e4f96;
+}
+#bouttonanglais:hover span {
+  padding-right: 25px;
+}
+#bouttonanglais:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+.title {
+  position: flex;
+  margin-top: 5%;
+  text-align: center;
+  color: #1e4f96;
+  font-weight: bold;
+  font-size: 25px;
+}
+.bar {
+  background-color: #1e4f96;
+  margin-left: 0%;
+  height: 3px;
+  border: none;
+  width: 80%;
+}
+.confiance1 {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  background-image: url("../../img/Confiance1.png");
+  background-size: 100%;
+  z-index: 9;
+  background-color: rebeccapurple;
+}
+.centerbuttun {
+  display: flex;
+  margin-left: 20%;
+  list-style: none;
+}
+.centerbuttun li {
+  margin-right: 25%;
+  align-items: center;
+  text-align: center;
+}
+#buttunnext {
+  display: inline-block;
+  background-color: #1e4f96;
+  border-radius: 10px;
+  border: 4px double #cccccc;
+  color: #eeeeee;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  margin-left: 40%;
+}
+
+#buttunnext span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+#buttunnext span:after {
+  content: "\00bb";
+  position: absolute;
+  z-index: 1;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+#buttunnext:hover {
+  background-color: #1e4f96;
+}
+#buttunnext:hover span {
+  padding-right: 25px;
+}
+#buttunnext:hover span:after {
+  opacity: 1;
+  right: 0;
+}
