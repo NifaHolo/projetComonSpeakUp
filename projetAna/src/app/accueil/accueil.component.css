@@ -1,0 +1,176 @@
+body {
+  margin-top: 0px;
+  margin-left: 0px;
+}
+#title1 {
+  font-size: 75px;
+  text-align: center;
+  color: #1e4f96;
+  font-weight: lighter;
+}
+.imgaccueil {
+  width: 250px;
+  height: 250px;
+  background-image: url("../../img/photoAna.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  margin: auto;
+  border-radius: 100%;
+  margin-top: 100px;
+}
+.imglogo1 {
+  width: 100px;
+  height: 100px;
+  background-image: url("../../img/gmail.jpg");
+  background-size: 100%;
+  border-radius: 100%;
+  background-repeat: no-repeat;
+  background-position: 0px;
+  background-color: white;
+}
+.imglogo2 {
+  width: 100px;
+  height: 100px;
+  background-image: url("../../img/tel.webp");
+  background-size: 100%;
+  border-radius: 100%;
+  background-repeat: no-repeat;
+  background-color: white;
+}
+.imglogo3 {
+  width: 100px;
+  height: 100px;
+  background-image: url("../../img/map.png");
+  background-size: 100%;
+  border-radius: 100%;
+  background-repeat: no-repeat;
+  background-color: white;
+}
+.imglogo4 {
+  width: 100px;
+  height: 100px;
+  background-image: url("../../img/linkdin.jpg");
+  background-size: 100%;
+  border-radius: 100%;
+  background-repeat: no-repeat;
+  background-position: 0px;
+  background-color: white;
+}
+.rebuild1 {
+  margin-left: -15px;
+}
+.rebuild2 {
+  margin-left: -0px;
+}
+.rebuild3 {
+  margin-left: -80px;
+}
+.rebuild4 {
+  margin-left: -20px;
+}
+
+.placement {
+  width: 90%;
+  display: flex;
+  justify-content: space-around;
+  margin-left: 5%;
+  margin-right: 5%;
+  list-style: none;
+  color: #1e4f96;
+}
+.presentation {
+  position: absolute;
+  width: 1000px;
+  height: 500px;
+  left: 10%;
+}
+.confiance {
+  position: absolute;
+  width: 1000px;
+  height: 500px;
+  border-left: 3px solid #1e4f96;
+  left: 50%;
+}
+.title2 {
+  color: #1e4f96;
+  font-size: 35px;
+}
+.presentation p {
+  color: #1e4f96;
+}
+.presforma {
+  list-style: none;
+  color: #1e4f96;
+}
+#conftitle {
+  margin-left: 15%;
+}
+.confformat {
+  display: grid;
+  grid-template-columns: 25% 25% 25%;
+  grid-template-rows: 60%;
+  margin-left: 10%;
+  list-style: none;
+  color: #1e4f96;
+}
+.confiance1 {
+  width: 150px;
+  height: 150px;
+  background-image: url("../../img/Confiance1.png");
+  background-size: 100%;
+  background-color: white;
+  border-radius: 100%;
+  background-position: 0px;
+  background-repeat: no-repeat;
+}
+.confiance2 {
+  width: 150px;
+  height: 150px;
+  background-image: url("../../img/Confiance2.png");
+  background-size: 100%;
+  background-color: white;
+  border-radius: 100%;
+  background-position: 0px;
+  background-repeat: no-repeat;
+}
+
+.confiance3 {
+  width: 150px;
+  height: 150px;
+  background-position: 0px;
+  background-image: url("../../img/Confiance3.png");
+  background-size: 100%;
+  background-color: white;
+  border-radius: 100%;
+  background-repeat: no-repeat;
+}
+.confiance4 {
+  width: 150px;
+  height: 150px;
+  background-position: 0px;
+  background-image: url("../../img/Confiance4.png");
+  background-size: 100%;
+  background-color: white;
+  border-radius: 100%;
+  background-repeat: no-repeat;
+}
+.confiance5 {
+  width: 150px;
+  height: 150px;
+  background-position: 35px;
+  background-image: url("../../img/Confiance5.png");
+  background-size: 50%;
+  background-color: white;
+  border-radius: 100%;
+  background-repeat: no-repeat;
+}
+.confiance6 {
+  width: 150px;
+  background-position: 0px;
+  height: 150px;
+  background-image: url("../../img/Confiance6.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-color: white;
+  border-radius: 100%;
+}

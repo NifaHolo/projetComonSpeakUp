@@ -1,20 +1,74 @@
 <div class="title">
-<h1>Questionnaire</h1>
-<h1>Langue - Anglais</h1>
+    <h1>Questionnaire</h1>
+    <h1>Langue - Anglais</h1>
 </div>
 <div id="questionnaires">
     <span>
         <h1>1 - Grammar</h1>
     </span>
     <h2>Choose the best word or phrase to fill each gap.</h2>
-    <div *ngFor="let questions of questions; let i = index" class="list-group-item">
-        <h2> {{questions.nom}} </h2>
-        <hr class="bar">
-        <h3>{{questions.grammar}}</h3>
-        <p><input type="radio">{{questions.rep1}}</p>
-        <p><input type="radio">{{questions.rep2}}</p>
-        <p><input type="radio">{{questions.rep3}}</p>
-        <p><input type="radio">{{questions.rep4}}</p>
-        <hr class="bar">
-    </div>
+    <form [formGroup]="form" (ngSubmit)="submit()" class="test">
+        <div *ngFor="let question of questions; let i = index">
+            <div>
+                <h2> {{question.nom}} </h2>
+                <h3>{{question.grammar}}</h3>
+                <div *ngFor="let reponse of question.reponses; let y = index" >
+                    <label>
+                    <input type="radio" name="Q_{{i +1}}" value="{{y}}" formControlName="Q_{{i +1}}">
+                    {{reponse}}
+                    </label>
+                </div>
+                <div *ngIf="showAnswer">
+                    <p *ngIf="question.bonneReponses == question.reponsesUser" id="green">Bonne réponse !</p>
+                </div>
+                <div *ngIf="showAnswer">
+                    <p *ngIf="question.bonneReponses != question.reponsesUser" id="red">Perdu ! la bonne réponse était la
+                    réponse {{question.reponses[question.bonneReponses]}} </p>
+                </div>
+                <br>
+                <hr class="bar">
+                <br>
+            </div>
+        </div>
+
+        <span>
+            <h1>1 - Vocab</h1>
+        </span>
+        <div *ngFor="let question2 of questions2; let i = index">
+            <div>
+                <h2> {{question2.nom2}} </h2>
+                <h3>{{question2.Vocab}}</h3>
+                <div *ngFor="let reponse2 of question2.reponses; let y = index" >
+                    <label>
+                        <input type="radio" name="Q2_{{i +1}}" value="{{y}}" formControlName="Q2_{{i +1}}">
+                        {{reponse2}}
+                    </label>
+                </div>
+                <div *ngIf="showAnswer">
+                    <p *ngIf="question2.bonneReponses == question2.reponsesUser" id="green">Bonne réponse !</p>
+                </div>
+                <div *ngIf="showAnswer">
+                    <p *ngIf="question2.bonneReponses != question2.reponsesUser" id="red">Perdu ! la bonne réponse était la
+                        réponse {{question2.reponses[question2.bonneReponses]}} </p>
+                </div>
+                <br>
+                <hr class="bar">
+                <br>
+            </div>
+        </div>
+    </form>
+    <ul class="centerbuttun">
+        <li>
+        <button id="bouttonanglais" (click)="submit();submitButton.disabled = true" #submitButton>
+            <span>Envoyer !</span>
+        </button>
+        </li>
+        <li>
+            <a href="audioanglais">
+                <button id="buttunnext" >
+                    <span>Next</span>
+                </button>
+            </a>
+        </li>
+    </ul>
 </div>

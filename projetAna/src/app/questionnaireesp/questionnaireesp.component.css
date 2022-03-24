@@ -17,19 +17,21 @@
 .title h1 {
   font-size: 80px;
 }
+
+
 #bouttonanglais {
-  display: inline-block;
   background-color: #1e4f96;
+  margin-left: 35%;
   border-radius: 10px;
   border: 4px double #cccccc;
   color: #eeeeee;
+  text-align: center;
   font-size: 28px;
   padding: 20px;
   width: 200px;
   transition: all 0.5s;
   cursor: pointer;
-  margin: 5px;
-  margin-left: 40%;
+
 }
 
 #bouttonanglais span {
@@ -41,7 +43,6 @@
 #bouttonanglais span:after {
   content: "\00bb";
   position: absolute;
-  z-index: 1;
   opacity: 0;
   top: 0;
   right: -20px;
@@ -72,65 +73,7 @@
   border: none;
   width: 80%;
 }
-.confiance1 {
-  position: relative;
-  width: 150px;
-  height: 150px;
-  background-image: url("../../img/Confiance1.png");
-  background-size: 100%;
-  z-index: 9;
-  background-color: rebeccapurple;
-}
-.centerbuttun {
-  display: flex;
-  justify-content: center;
-  list-style: none;
-}
-.centerbuttun li {
-  margin-right: 25%;
-  align-items: center;
-  text-align: center;
-}
-#buttunnext {
-  display: inline-block;
-  background-color: #1e4f96;
-  border-radius: 10px;
-  border: 4px double #cccccc;
-  color: #eeeeee;
-  font-size: 28px;
-  padding: 20px;
-  width: 200px;
-  transition: all 0.5s;
-  cursor: pointer;
-  margin: 5px;
-  margin-left: 40%;
-}
 
-#buttunnext span {
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  transition: 0.5s;
-}
-#buttunnext span:after {
-  content: "\00bb";
-  position: absolute;
-  z-index: 1;
-  opacity: 0;
-  top: 0;
-  right: -20px;
-  transition: 0.5s;
-}
-#buttunnext:hover {
-  background-color: #1e4f96;
-}
-#buttunnext:hover span {
-  padding-right: 25px;
-}
-#buttunnext:hover span:after {
-  opacity: 1;
-  right: 0;
-}
 label {
   color: #1e4f96;
   display: inline-block;
@@ -139,6 +82,7 @@ label {
   font-weight: bold;
   padding: 5px 20px;
 }
+
 #red{
   color:red;
   font:bold;

@@ -1,0 +1,30 @@
+
+<div class="title">
+    <h1>Questionnaire</h1>
+    <h1>Langue - Anglais</h1>
+</div>
+<div id="questionnaires">
+    <span>
+        <h1>3 - Audio</h1>
+    </span>
+    <h2>Choose the best word or phrase to fill each gap.</h2>
+    <div *ngFor="let audio of audio; let i = index" class="list-group-item">
+        <form>
+            <h2> {{audio.numero}} </h2>
+            <hr class="bar">
+        <figure>
+            <audio controls src="{{audio.source}}">
+                Your browser does not support the
+                <code>audio</code> element.
+            </audio>
+        </figure>
+        <hr class="bar">
+        </form>
+    </div>
+
+
+       <button id="bouttonanglais" >
+            <span>Submit !</span>
+        </button>
+
+</div>
