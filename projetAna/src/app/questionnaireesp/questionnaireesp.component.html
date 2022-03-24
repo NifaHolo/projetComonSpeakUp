@@ -7,27 +7,32 @@
 <div id="questionnaires">
     <h1></h1>
     <form [formGroup]="form" (ngSubmit)="submit()" class="test">
-        <div *ngFor="let question of questions; let i = index">
+        <div *ngFor="let question of questions; let i = index" class="grid">
             <div>
                
                 <h2> {{question.nom}} </h2>
                 <h3>{{question.grammar}}</h3>
-                
-                    <div *ngFor="let reponse of question.reponses; let y = index" class="radio-group-{{i +1}}">
-                        <label >
-                            <input type="radio" name="Q_{{i +1}}" value="{{y}}"formControlName="Q_{{i +1}}" >
+                <div class="test2">
+                    <div *ngFor="let reponse of question.reponses; let y = index">
+                       
+                            <input type="radio" name="Q_{{i +1}}" value="{{y}}"formControlName="Q_{{i +1}}" class="check-with-label" id="idinput{{y}}{{i}}" >
+                        <label class="radiobuttun" for="idinput{{y}}{{i}}">
                             {{reponse}}
                         </label>
                 </div>
-                <div *ngIf="showAnswer">
-                    <p *ngIf="question.bonneReponses == question.reponsesUser" id="green">Bonne réponse !</p>
+            </div>
+            <div *ngIf="showAnswer" class="show">
+                <div id="green">
+                    <p *ngIf="question.bonneReponses == question.reponsesUser">Bonne réponse !</p>
                 </div>
-                <div *ngIf="showAnswer">
-                    <p *ngIf="question.bonneReponses != question.reponsesUser" id="red">Perdu ! la bonne réponse était la réponse {{question.reponses[question.bonneReponses]}} </p>
+            </div>
+            
+            <div *ngIf="showAnswer" class="show">
+                <div id="red">
+                    <p *ngIf="question.bonneReponses != question.reponsesUser">Mauvaise réponse ! </p>
                 </div>
-                <br>
-                <hr class="bar">
-                <br>
+            </div>
+            <br>
             </div>
             
         </div>

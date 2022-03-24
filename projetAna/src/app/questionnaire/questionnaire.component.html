@@ -3,63 +3,70 @@
     <h1>Langue - Anglais</h1>
 </div>
 <div id="questionnaires">
-    <span>
-        <h1>1 - Grammar</h1>
-    </span>
-    <h2>Choose the best word or phrase to fill each gap.</h2>
-    <form [formGroup]="form" (ngSubmit)="submit()" class="test">
-        <div *ngFor="let question of questions; let i = index">
-            <div>
-                <h2> {{question.nom}} </h2>
-                <h3>{{question.grammar}}</h3>
-                <div *ngFor="let reponse of question.reponses; let y = index" >
-                    <label>
-                    <input type="radio" name="Q_{{i +1}}" value="{{y}}" formControlName="Q_{{i +1}}">
-                    {{reponse}}
-                    </label>
-                </div>
-                <div *ngIf="showAnswer">
-                    <p *ngIf="question.bonneReponses == question.reponsesUser" id="green">Bonne réponse !</p>
-                </div>
-                <div *ngIf="showAnswer">
-                    <p *ngIf="question.bonneReponses != question.reponsesUser" id="red">Perdu ! la bonne réponse était la
-                    réponse {{question.reponses[question.bonneReponses]}} </p>
-                </div>
-                <br>
-                <hr class="bar">
-                <br>
-            </div>
-        </div>
-
+   
+    <form [formGroup]="form" (ngSubmit)="submit()" class="test"> 
+        <section id="grammaire">
         <span>
-            <h1>1 - Vocab</h1>
-        </span>
-        <div *ngFor="let question2 of questions2; let i = index">
-            <div>
-                <h2> {{question2.nom2}} </h2>
-                <h3>{{question2.Vocab}}</h3>
-                <div *ngFor="let reponse2 of question2.reponses; let y = index" >
-                    <label>
-                        <input type="radio" name="Q2_{{i +1}}" value="{{y}}" formControlName="Q2_{{i +1}}">
-                        {{reponse2}}
-                    </label>
+        <h2>Grammar - Choose the best word or phrase to fill each gap.</h2>
+    </span>
+    <h2></h2>
+        
+            <div *ngFor="let question of questions; let i = index" class ="grid">
+                <div>
+                    <h2> {{i+1}}: {{question.grammar}} </h2>
+                    <div class="test2">
+                        <div *ngFor="let reponse of question.reponses; let y = index" >
+                            <input type="radio" name="Q_{{i +1}}" value="{{y}}" formControlName="Q_{{i +1}}" class="check-with-label" id="idinput{{i}}_{{y}}">
+                            <label class="radiobuttun" for="idinput{{i}}_{{y}}">
+                                {{reponse}}
+                            </label>
+                        </div>
+                    </div>
+                    <div *ngIf="showAnswer" class="show">
+                        <div id="green">
+                            <p *ngIf="question.bonneReponses == question.reponsesUser" >Bonne réponse !</p>
+                        </div>
+                    </div>
+                    <div *ngIf="showAnswer" class="show">
+                        <div id="red">
+                            <p *ngIf="question.bonneReponses != question.reponsesUser" >Mauvaise réponse ! </p>
+                        </div>
+                    </div>
+                    <br>
                 </div>
-                <div *ngIf="showAnswer">
-                    <p *ngIf="question2.bonneReponses == question2.reponsesUser" id="green">Bonne réponse !</p>
-                </div>
-                <div *ngIf="showAnswer">
-                    <p *ngIf="question2.bonneReponses != question2.reponsesUser" id="red">Perdu ! la bonne réponse était la
-                        réponse {{question2.reponses[question2.bonneReponses]}} </p>
-                </div>
-                <br>
-                <hr class="bar">
-                <br>
             </div>
-        </div>
+        </section>
+        <section id="vocabulaire">
+            <span>
+                <h1>Vocab - Choose the best word or phrase to fill each gap.</h1>
+            </span>
+            <div *ngFor="let question2 of questions2; let i = index"  class ="grid">
+                <div>
+                    <h2> {{question2.nom2}} </h2>
+                    <h3>{{question2.Vocab}}</h3>
+                    <div class="test2">
+                    <div *ngFor="let reponse2 of question2.reponses; let y = index">
+                            <input type="radio" name="Q2_{{i +1}}" value="{{y}}" formControlName="Q2_{{i +1}}" class="check-with-label2" id="idinput2{{y}}{{i}}">
+                        <label class="radiobuttun2" for="idinput2{{y}}{{i}}">
+                            {{reponse2}}
+                        </label>
+                    </div>
+                </div>
+                    <div *ngIf="showAnswer">
+                        <p *ngIf="question2.bonneReponses == question2.reponsesUser" id="green">Bonne réponse !</p>
+                    </div>
+                    <div *ngIf="showAnswer">
+                        <p *ngIf="question2.bonneReponses != question2.reponsesUser" id="red">Perdu ! </p>
+                    </div>
+                    <br>
+                    <br>
+                </div>
+            </div>
+        </section>
     </form>
     <ul class="centerbuttun">
         <li>
-        <button id="bouttonanglais" (click)="submit();submitButton.disabled = true" #submitButton>
+        <button id="bouttonanglais" (click)="submit();submitButton.disabled" #submitButton>
             <span>Envoyer !</span>
         </button>
         </li>
@@ -71,4 +78,10 @@
             </a>
         </li>
     </ul>
+    <div id="navigationQuestions">
+        <a href="/questionnaire/#grammaire">Grammar</a><br>
+        <a href="/questionnaire/#vocabulaire">Vocab</a><br>
+        <a href="/questionnaire/#">haut de page</a>
+    </div>
+
 </div>

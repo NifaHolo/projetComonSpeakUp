@@ -1,21 +1,28 @@
+
 #questionnaires {
-  width: 80%;
-  margin: auto;
   border-radius: 25px;
-  background-color: #a5bbdc;
-  border: 3px solid #1e4f96;
-  padding-left: 5%;
-  overflow: hidden;
   color: #1e4f96;
+  text-align: center;
 }
 
-
-#questionnaires h1 {
-  padding-top: 100px;
-  font-size: 70px;
+.test{
+  display: grid;
+  grid-template-columns: 80%;
+  justify-content: center;
+}
+.test2{
+display:grid;
+grid-template-columns: 25% 25% 25% 25%;
+justify-content: space-around;
+}
+.grid{
+  background-color: rgb(249, 250, 251);
+  border-radius: 15px;
+  margin-bottom: 10px;
+  text-align: center;
 }
 .title h1 {
-  font-size: 80px;
+  font-size: 30px;
 }
 #bouttonanglais {
   display: inline-block;
@@ -65,22 +72,7 @@
   font-weight: bold;
   font-size: 25px;
 }
-.bar {
-  background-color: #1e4f96;
-  margin-left: 0%;
-  height: 3px;
-  border: none;
-  width: 80%;
-}
-.confiance1 {
-  position: relative;
-  width: 150px;
-  height: 150px;
-  background-image: url("../../img/Confiance1.png");
-  background-size: 100%;
-  z-index: 9;
-  background-color: rebeccapurple;
-}
+
 .centerbuttun {
   display: flex;
   justify-content: center;
@@ -131,19 +123,73 @@
   opacity: 1;
   right: 0;
 }
-label {
+.radiobuttun {
   color: #1e4f96;
   display: inline-block;
-  width: 200px;
+  width: 80%;
   cursor: pointer;
   font-weight: bold;
   padding: 5px 20px;
+
 }
-#red{
-  color:red;
-  font:bold;
+.check-with-label{ 
+  display: none;
 }
+.check-with-label:checked + .radiobuttun {
+background-color: #1e4f96;
+color:#eeeeee;
+
+}
+
+.radiobuttun2 {
+  color: #1e4f96;
+  display: inline-block;
+  width: 80%;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 5px 20px;
+
+}
+.check-with-label2{ 
+    display: none;
+
+}
+.check-with-label2:checked + .radiobuttun2 {
+background-color: #1e4f96;
+color:#eeeeee;
+
+}
+
+
+#red {
+  color:rgb(241, 105, 71);
+}
+.show{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
 #green{
-  color:green;
-  font:bold;
+ color:green;
 }
+#navigationQuestions{
+  display: inline-block;
+ 
+  position: fixed;
+  top:50%;
+  left: 0;
+  text-align: center;
+  transform: translate(0%, -50%); 
+  right: 0; 
+  width:150px;
+}
+#navigationQuestions a{
+  font-size: 20px;
+  color: #1e4f96;
+  margin:auto;
+  margin-top: 20px;
+  display: inline-block;
+  text-decoration: none;
+  transition: 0.5s;
+  }

@@ -1,37 +1,46 @@
 #questionnaires {
-  width: 80%;
-  margin: auto;
   border-radius: 25px;
-  background-color: #a5bbdc;
-  border: 3px solid #1e4f96;
-  padding-left: 5%;
-  overflow: hidden;
   color: #1e4f96;
+  text-align: center;
+}
+
+.test{
+  display: grid;
+  grid-template-columns: 80%;
+  justify-content: center;
+}
+.test2{
+display:grid;
+grid-template-columns: 25% 25% 25% 25%;
+justify-content: space-around;
 }
 
 
-#questionnaires h1 {
-  padding-top: 100px;
-  font-size: 70px;
+.grid{
+  background-color: rgb(249, 250, 251);
+  border-radius: 15px;
+  margin-bottom: 10px;
+  text-align: center;
 }
+
+
+
 .title h1 {
-  font-size: 80px;
+  font-size: 30px;
 }
-
-
 #bouttonanglais {
+  display: inline-block;
   background-color: #1e4f96;
-  margin-left: 35%;
   border-radius: 10px;
   border: 4px double #cccccc;
   color: #eeeeee;
-  text-align: center;
   font-size: 28px;
   padding: 20px;
   width: 200px;
   transition: all 0.5s;
   cursor: pointer;
-
+  margin: 5px;
+  margin-left: 40%;
 }
 
 #bouttonanglais span {
@@ -43,6 +52,7 @@
 #bouttonanglais span:after {
   content: "\00bb";
   position: absolute;
+  z-index: 1;
   opacity: 0;
   top: 0;
   right: -20px;
@@ -66,28 +76,43 @@
   font-weight: bold;
   font-size: 25px;
 }
-.bar {
-  background-color: #1e4f96;
-  margin-left: 0%;
-  height: 3px;
-  border: none;
-  width: 80%;
-}
 
-label {
+
+.radiobuttun {
   color: #1e4f96;
   display: inline-block;
-  width: 200px;
+  width: 80%;
   cursor: pointer;
   font-weight: bold;
   padding: 5px 20px;
+
+}
+.check-with-label{ 
+    display: none;
+
+}
+.check-with-label:checked + .radiobuttun {
+background-color: #1e4f96;
+color:#eeeeee;
+
 }
 
-#red{
-  color:red;
-  font:bold;
+.title {
+  position: flex;
+  margin-top: 5%;
+  text-align: center;
+  color: #1e4f96;
+
+  font-size: 25px;
 }
+#red {
+  color:rgb(241, 105, 71);
+}
+.show{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
 #green{
-  color:green;
-  font:bold;
-}
+ color:green;}

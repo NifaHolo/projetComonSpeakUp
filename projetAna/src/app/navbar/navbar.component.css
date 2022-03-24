@@ -16,9 +16,15 @@
     float: left;
     margin-left: 170px;
     text-decoration: none;
-    line-height: 95px;
-    font-weight: bold;
+    margin-top:35px;
+   transition: color 0.3s ease;
+
 }
+.Accueil:hover{
+  color:rgb(241, 105, 71);
+
+}
+
 
 .ulNavBar{
     display: flex;
@@ -45,12 +51,16 @@
 }
 .ulNavBar a{
   text-decoration: none;
-  font-weight: bold;
   margin-right: 30px;
   margin-left: 15px;
   color:#DEECF3;
+  transition: color 0.3s ease;
   font-size: 20px;
     
+}
+.ulNavBar a:hover{
+  color:rgb(241, 105, 71);
+
 }
 
 .navBar{
@@ -73,7 +83,9 @@
 }
 
 #menuToggle a:hover {
-  color: tomato;
+  color:rgb(241, 105, 71);
+
+
 }
 
 #menuToggle input {
@@ -88,6 +100,7 @@
   z-index: 200;
   -webkit-touch-callout: none;
 }
+
 
 #menuToggle #span1 {
   display: block;
@@ -114,7 +127,10 @@
   transform-origin: 4px 0px;
   transform: rotate(-45deg) translate(144px, 79px);
 }
+#menuToggle input:hover + a {
+  color:rgb(241, 105, 71);
 
+}
 #menuToggle span:first-child {
   transform-origin: 0% 0%;
 }
@@ -126,12 +142,7 @@
 #menuToggle input:checked ~ span {
   opacity: 1;
   transform: rotate(45deg) translate(-2px, -1px);
-  background: linear-gradient(
-      0deg,
-      red(16, 34, 196, 0.2),
-      red(16, 34, 196, 0.2)
-    ),
-    red(49, 48, 51, 0.72);
+
 }
 
 #menuToggle input:checked ~ #span2:nth-last-child(2) {
@@ -145,23 +156,29 @@
 
 #menu {
   position: absolute;
-  width: 150px;
+  width: 140px;
   margin: 100px -15px 100px;
+  height: 110px;
   padding: 20px;
+  padding-top:25px;
   margin-top: -90px;
-    background-color: #DEECF3;
-    border:3px solid  #799ACA;
+  background-color: #DEECF3;
+  border:3px solid  #799ACA;
   list-style-type: none;
   border-radius: 5px;
   -webkit-font-smoothing: antialiased;
   transform-origin: 0% 0%;
   transform: translate(250%, 0);
-    text-align: center;
+  text-align: center;
 }
 
 #menu li {
   color:#799ACA;
-  font-size: 15px;
+  font-size: 15px;  
+  transition: color 0.3s ease;
+}
+#menu li:hover {
+  color:rgb(241, 105, 71);
 }
 
 #menuToggle input:checked ~ ul {
@@ -169,12 +186,12 @@
 }
 
 .stylemenu {
-  width: 100%;
+  width: 101%;
   color: black;
   background-color: #799ACA;
   position: absolute;
-  padding-top: 45px;
-  left: 0;
+  padding-top: 53px;
+  left: -1px;
   top: 0;
   border-top-left-radius: 1px;
   border-top-right-radius: 1px;

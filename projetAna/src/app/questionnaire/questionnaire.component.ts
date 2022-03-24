@@ -34,7 +34,7 @@ export class QuestionnaireComponent implements OnInit {
       reponses: [ "a. you",
        "b. your",
        "c. you're",
-        "d. "],
+        ],
       bonneReponses: 1,
       reponsesUser : -1
     },
@@ -61,7 +61,7 @@ export class QuestionnaireComponent implements OnInit {
     {
       nom: "Question 5 :",
       grammar: "I ______ rain.",
-      reponses:[ "a.  not like",
+      reponses:[ "a. not like",
        "b. like not",
        "c. no like",
         "d. don’t like",
@@ -164,7 +164,7 @@ export class QuestionnaireComponent implements OnInit {
     }, {
       nom: "Question 16 :",
       grammar: " I’m afraid I can’t meet you tomorrow. ______ lunch with an old friend.",
-      reponses:[ "a.  I have",
+      reponses:[ "a. I have",
        "b. a little",
        "c. few",
         "d. a few"],
@@ -222,7 +222,7 @@ export class QuestionnaireComponent implements OnInit {
       reponses:[ "a. am",
        "b. is",
        "c. were",
-        "d.  have been"],
+        "d. have been"],
       bonneReponses: 2,
       reponsesUser : -1
     }, {
@@ -273,7 +273,7 @@ export class QuestionnaireComponent implements OnInit {
     }, {
       nom: "Question 28 :",
       grammar: " Where would you live if you ______ to live anywhere?",
-      reponses:[ "a.  hadn’t had",
+      reponses:[ "a. hadn’t had",
        "b. don’t have",
        "c. wouldn’t have",
         "d. didn’t have"],
@@ -285,7 +285,7 @@ export class QuestionnaireComponent implements OnInit {
       reponses:[ "a. was coming",
        "b. comes",
        "c. will come",
-        "d.  is coming"],
+        "d. is coming"],
       bonneReponses: 0,
       reponsesUser : -1
     }, {
@@ -301,8 +301,8 @@ export class QuestionnaireComponent implements OnInit {
       nom: "Question 31 :",
       grammar: "The side mirror of my car is broken. I need to ______. Do you know a good mechanic?",
       reponses:[ "a. fix it",
-       "b.  have it fixed",
-       "c.  have fixed it",
+       "b. have it fixed",
+       "c. have fixed it",
         "d. fixed it"],
       bonneReponses: 1,
       reponsesUser : -1
@@ -320,7 +320,7 @@ export class QuestionnaireComponent implements OnInit {
       grammar: "Joe told me that ______ for over an hour.",
       reponses:[ "a. he’d been waiting",
        "b. he’s waited",
-       "c.  he’s waiting",
+       "c. he’s waiting",
         "d. he waits"],
       bonneReponses: 0,
       reponsesUser : -1
@@ -658,7 +658,7 @@ export class QuestionnaireComponent implements OnInit {
 
     return obj;
   }
-
+ 
   //  Au click sur le button submit
   submit() {
 

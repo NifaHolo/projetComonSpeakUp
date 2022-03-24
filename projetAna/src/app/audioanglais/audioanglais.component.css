@@ -1,26 +1,25 @@
+.title h1 {
+  font-size: 30px;
+}
 #questionnaires {
-  width: 80%;
-  margin:auto;
   border-radius: 25px;
-  background-color: #a5bbdc;
-  border: 3px solid #1e4f96;
-  padding-left: 5%;
-  overflow: hidden;
   color: #1e4f96;
+  text-align: center;
 }
 
-#questionnaires p {
-  color: #1e4f96;
+.test{
+  display: grid;
+  grid-template-columns: 80%;
+  justify-content: center;
 }
-#questionnaires h1 {
-  padding-top: 100px;
-  font-size: 70px;
-}
-.title h1 {
-  font-size: 80px;
+
+.grid{
+  background-color: rgb(249, 250, 251);
+  border-radius: 15px;
+  margin-bottom: 10px;
+  text-align: center;
 }
 #bouttonanglais {
-  text-align: center;
   display: inline-block;
   background-color: #1e4f96;
   border-radius: 10px;
@@ -33,56 +32,6 @@
   cursor: pointer;
   margin: 5px;
   margin-left: 40%;
-}
-
-#bouttonanglais span {
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  transition: 0.5s;
-}
-#bouttonanglais span:after {
-  content: "\00bb";
-  position: absolute;
-  z-index: 1;
-  opacity: 0;
-  top: 0;
-  right: -20px;
-  transition: 0.5s;
-}
-#bouttonanglais:hover {
-  background-color: #1e4f96;
-}
-#bouttonanglais:hover span {
-  padding-right: 25px;
-}
-#bouttonanglais:hover span:after {
-  opacity: 1;
-  right: 0;
-}
-.title {
-  position: flex;
-  margin-top: 5%;
-  text-align: center;
-  color: #1e4f96;
-  font-weight: bold;
-  font-size: 25px;
-}
-.bar {
-  background-color: #1e4f96;
-  margin-left: 0%;
-  height: 3px;
-  border: none;
-  width: 80%;
-}
-.confiance1 {
-  position: relative;
-  width: 150px;
-  height: 150px;
-  background-image: url("../../img/Confiance1.png");
-  background-size: 100%;
-  z-index: 9;
-  background-color: rebeccapurple;
 }
 .centerbuttun {
   display: flex;
