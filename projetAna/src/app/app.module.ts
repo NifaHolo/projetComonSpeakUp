@@ -1,7 +1,6 @@
-import { NgModule } from '@angular/core';
+import { getNgModuleById, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes} from '@angular/router';
-
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { QuestionnaireComponent } from './questionnaire/questionnaire.component';
@@ -10,6 +9,7 @@ import { DescnivComponent } from './descniv/descniv.component';
 import { AccueilComponent } from './accueil/accueil.component';
 import { AudioanglaisComponent } from './audioanglais/audioanglais.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 
 const appRoutes: Routes = [
   { path : 'questionnaire'       , component:QuestionnaireComponent },
@@ -28,14 +28,16 @@ const appRoutes: Routes = [
     DescnivComponent,
     AccueilComponent,
     AudioanglaisComponent,
+  
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(appRoutes),
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }

@@ -1,42 +1,44 @@
-<div class="title">
+
+<div class="title" #questionnaires>
     <h1>Questionnaire</h1>
     <h1>Langue - Anglais</h1>
 </div>
-<div id="questionnaires">
-   
-    <form [formGroup]="form" (ngSubmit)="submit()" class="test"> 
-        <section id="grammaire">
+<div id="questionnaires" >
+
+    <form [formGroup]="form" (ngSubmit)="submit()" class="test" name="myform"> 
+        <section #grammaire>
         <span>
         <h2>Grammar - Choose the best word or phrase to fill each gap.</h2>
     </span>
     <h2></h2>
-        
             <div *ngFor="let question of questions; let i = index" class ="grid">
                 <div>
                     <h2> {{i+1}}: {{question.grammar}} </h2>
                     <div class="test2">
-                        <div *ngFor="let reponse of question.reponses; let y = index" >
-                            <input type="radio" name="Q_{{i +1}}" value="{{y}}" formControlName="Q_{{i +1}}" class="check-with-label" id="idinput{{i}}_{{y}}">
+                        <div *ngFor="let reponse of question.reponses; let y = index">
+                            <input type="radio" name="Q_{{i +1}}" value="{{y}}" formControlName="Q_{{i +1}}" class="check-with-label" id="idinput{{i}}_{{y}}" required>
                             <label class="radiobuttun" for="idinput{{i}}_{{y}}">
                                 {{reponse}}
                             </label>
                         </div>
                     </div>
                     <div *ngIf="showAnswer" class="show">
-                        <div id="green">
-                            <p *ngIf="question.bonneReponses == question.reponsesUser" >Bonne réponse !</p>
+                        <div >
+                            <p  class="good-answer-text-decoration" *ngIf="question.bonneReponses == question.reponsesUser" >Bonne réponse !</p>
+                            <p class="wrong-answer-text-decoration" *ngIf="question.bonneReponses != question.reponsesUser && question.reponsesUser != -1">Mauvaise réponse ! </p>
+
                         </div>
                     </div>
-                    <div *ngIf="showAnswer" class="show">
+                    <div *ngIf="showforgetAnswer" class="show">
                         <div id="red">
-                            <p *ngIf="question.bonneReponses != question.reponsesUser" >Mauvaise réponse ! </p>
+                            <p *ngIf="question.reponsesUser == -1">Réponse oublié ! </p>
                         </div>
-                    </div>
+                    </div> 
                     <br>
                 </div>
             </div>
         </section>
-        <section id="vocabulaire">
+        <section #vocabulaire>
             <span>
                 <h1>Vocab - Choose the best word or phrase to fill each gap.</h1>
             </span>
@@ -46,7 +48,7 @@
                     <h3>{{question2.Vocab}}</h3>
                     <div class="test2">
                     <div *ngFor="let reponse2 of question2.reponses; let y = index">
-                            <input type="radio" name="Q2_{{i +1}}" value="{{y}}" formControlName="Q2_{{i +1}}" class="check-with-label2" id="idinput2{{y}}{{i}}">
+                            <input type="radio" name="Q2_{{i +1}}" value="{{y}}" formControlName="Q2_{{i +1}}" class="check-with-label2" id="idinput2{{y}}{{i}}" required="required">
                         <label class="radiobuttun2" for="idinput2{{y}}{{i}}">
                             {{reponse2}}
                         </label>
@@ -55,18 +57,27 @@
                     <div *ngIf="showAnswer">
                         <p *ngIf="question2.bonneReponses == question2.reponsesUser" id="green">Bonne réponse !</p>
                     </div>
-                    <div *ngIf="showAnswer">
-                        <p *ngIf="question2.bonneReponses != question2.reponsesUser" id="red">Perdu ! </p>
+                <div *ngIf="showforgetAnswer" class="show">
+                    <div id="red">
+                        <p *ngIf="question2.reponsesUser == -1">Réponse oublié ! </p>
                     </div>
+                </div>
+                <div *ngIf="showAnswer" class="show">
+                    <div id="red">
+                        <p *ngIf="question2.bonneReponses != question2.reponsesUser && question2.reponsesUser != -1">Mauvaise réponse !</p>  
+                    </div>
+                </div>
                     <br>
-                    <br>
+                    
                 </div>
             </div>
         </section>
     </form>
     <ul class="centerbuttun">
         <li>
-        <button id="bouttonanglais" (click)="submit();submitButton.disabled" #submitButton>
+            <!-- disable le bouton quand cliquer -->
+            
+        <button id="bouttonanglais"  [disabled]="showAnswer"   type="submit" (click)="submit();" #submitButton>
             <span>Envoyer !</span>
         </button>
         </li>
@@ -79,9 +90,9 @@
         </li>
     </ul>
     <div id="navigationQuestions">
-        <a href="/questionnaire/#grammaire">Grammar</a><br>
-        <a href="/questionnaire/#vocabulaire">Vocab</a><br>
-        <a href="/questionnaire/#">haut de page</a>
+        <button (click)="scroll(grammaire)">Grammar</button><br>
+        <button (click)="scroll(vocabulaire)">Vocab</button><br>
+        <button (click)="scroll(questionnaires)">Haut de page</button>
     </div>
 
 </div>

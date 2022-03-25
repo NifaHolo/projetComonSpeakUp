@@ -27,27 +27,25 @@
 
 
 .ulNavBar{
-    display: flex;
-    list-style: none;
-    margin-right: 20px;
-    float: right;
+  display: flex;
+  list-style: none;
+  margin-right: 20px;
+  float: right;
 }
 .ulli{
-   height: 50px;
-   border-radius: 15px;
-   
+  height: 50px;
+  border-radius: 15px;
+  margin-top: 20px;
    z-index: 2;
-  
-   
 }
 #menu a {
-    line-height: 30px;
-    
+  line-height: 30px;
 }
 .ullia {
-    line-height: 60px;
-    position:relative;
-    z-index: 2;
+  margin-top: 20px;
+  line-height: 60px;
+  position:relative;
+  z-index: 2;
 }
 .ulNavBar a{
   text-decoration: none;
@@ -56,45 +54,36 @@
   color:#DEECF3;
   transition: color 0.3s ease;
   font-size: 20px;
-    
 }
 .ulNavBar a:hover{
   color:rgb(241, 105, 71);
-
 }
-
 .navBar{
   background-color:#1E4F96;
   height: 80px;
 }
-
-
 #menuToggle {
   display: block;
   z-index: 1;
   -webkit-user-select: none;
   user-select: none;
 }
-
 #menuToggle a {
   text-decoration: none;
   color: #ededed;
   transition: color 0.3s ease;
 }
-
 #menuToggle a:hover {
   color:rgb(241, 105, 71);
-
-
 }
 
 #menuToggle input {
   display: block;
   width: 170px;
   height: 50px;
-  right: 230px;
+  right: 250px;
   position: absolute;
-  top: 15px;
+  top: 30px;
   cursor: pointer;
   opacity: 0;
   z-index: 200;
@@ -156,14 +145,13 @@
 
 #menu {
   position: absolute;
-  width: 140px;
-  margin: 100px -15px 100px;
-  height: 110px;
+  width: 190px;
+  margin: 100px -6px 100px;
+  height: 160px;
   padding: 20px;
   padding-top:25px;
   margin-top: -90px;
   background-color: #DEECF3;
-  border:3px solid  #799ACA;
   list-style-type: none;
   border-radius: 5px;
   -webkit-font-smoothing: antialiased;

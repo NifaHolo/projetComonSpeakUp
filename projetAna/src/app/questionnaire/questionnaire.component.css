@@ -1,4 +1,5 @@
 
+
 #questionnaires {
   border-radius: 25px;
   color: #1e4f96;
@@ -79,9 +80,8 @@ justify-content: space-around;
   list-style: none;
 }
 .centerbuttun li {
-  margin-right: 25%;
-  align-items: center;
-  text-align: center;
+  margin-right: 5%;
+
 }
 #buttunnext {
   display: inline-block;
@@ -172,6 +172,14 @@ color:#eeeeee;
 
 #green{
  color:green;
+}
+
+.good-answer-text-decoration{
+ color:green;
+}
+
+.wrong-answer-text-decoration{
+ color:rgb(241, 105, 71);
 }
 #navigationQuestions{
   display: inline-block;
