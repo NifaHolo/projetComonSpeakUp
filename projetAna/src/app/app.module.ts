@@ -9,6 +9,9 @@ import { DescnivComponent } from './descniv/descniv.component';
 import { AccueilComponent } from './accueil/accueil.component';
 import { AudioanglaisComponent } from './audioanglais/audioanglais.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatDialogModule } from '@angular/material/dialog';
+import { PopupComponent } from './questionnaire/popup/popup.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 const appRoutes: Routes = [
@@ -28,14 +31,16 @@ const appRoutes: Routes = [
     DescnivComponent,
     AccueilComponent,
     AudioanglaisComponent,
-  
+    PopupComponent,
+    
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(appRoutes),
     FormsModule,
     ReactiveFormsModule,
-
+    MatDialogModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

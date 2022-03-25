@@ -6,13 +6,18 @@ import {
   FormControl,
   ValidatorFn
 } from '@angular/forms';
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { PopupComponent } from './popup/popup.component';
+
+
 
 @Component({
   selector: "app-questionnaire",
   templateUrl: "./questionnaire.component.html",
   styleUrls: ["./questionnaire.component.css"]
 })
-export class QuestionnaireComponent implements OnInit {
+export class QuestionnaireComponent implements OnInit { 
+
 
   title = "projetAna";
   
@@ -629,7 +634,7 @@ export class QuestionnaireComponent implements OnInit {
   form: FormGroup;
 
 
-  constructor(private formBuilder: FormBuilder) {
+  constructor(private formBuilder: FormBuilder, public dialog: MatDialog) {
 
     var form = this.createArrayForm();
    
@@ -639,6 +644,21 @@ export class QuestionnaireComponent implements OnInit {
     );
    
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
   scroll(el: HTMLElement) {
@@ -721,11 +741,20 @@ export class QuestionnaireComponent implements OnInit {
             acc_good_answer2++;
 
         }
-      var QuestionsGrammaire = this.questions.length;
-      var QuestionsVocab = this.questions2.length;
+       var QuestionsGrammaire = this.questions.length;
+       var QuestionsVocab = this.questions2.length;      
+      // alert("Un mail a été envoyer a votre profésseur d'anglais Ana Maselli votre notation est :" + "gammaire : " + acc_good_answer + " / " + QuestionsGrammaire + "Vocab : " + acc_good_answer2 + " / " + QuestionsVocab + "Vous pouvez vérifier vos érreurs ou cliquer sur le boutton suivant pour aller sur le prochain test."); 
+
     //  afficher un message de confirmtion
     //  recap de la note 
-      alert("Un mail a été envoyer a votre profésseur d'anglais Ana Maselli votre notation est :" + "gammaire : " + acc_good_answer + " / " + QuestionsGrammaire + "Vocab : " + acc_good_answer2 + " / " + QuestionsVocab + "Vous pouvez vérifier vos érreurs ou cliquer sur le boutton suivant pour aller sur le prochain test."); 
+      const dialogRef = this.dialog.open(PopupComponent, {
+        width: '500px',
+        data: { acc_good_answer: acc_good_answer, acc_good_answer2: acc_good_answer2, QuestionsVocab: QuestionsVocab, QuestionsGrammaire: QuestionsGrammaire  },
+      });
+      dialogRef.afterClosed().subscribe(result => 
+        {
+        console.log('The dialog was closed');
+        });
 
     }
 

@@ -13,7 +13,8 @@
     <h2></h2>
             <div *ngFor="let question of questions; let i = index" class ="grid">
                 <div>
-                    <h2> {{i+1}}: {{question.grammar}} </h2>
+                    <h2> {{question.nom}} </h2>
+                    <h3>{{question.grammar}}</h3>
                     <div class="test2">
                         <div *ngFor="let reponse of question.reponses; let y = index">
                             <input type="radio" name="Q_{{i +1}}" value="{{y}}" formControlName="Q_{{i +1}}" class="check-with-label" id="idinput{{i}}_{{y}}" required>
@@ -94,5 +95,4 @@
         <button (click)="scroll(vocabulaire)">Vocab</button><br>
         <button (click)="scroll(questionnaires)">Haut de page</button>
     </div>
-
 </div>
