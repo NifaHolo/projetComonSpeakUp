@@ -1,8 +1,11 @@
 body {
   margin-top: 0px;
   margin-left: 0px;
+  width: 100%;
+  overflow-x: hidden;
 }
 #title1 {
+  margin-top: 20px;
   font-size: 75px;
   text-align: center;
   color: #1e4f96;
@@ -16,7 +19,7 @@ body {
   background-repeat: no-repeat;
   margin: auto;
   border-radius: 100%;
-  margin-top: 100px;
+  margin-top: 30px;
 }
 .imglogo1 {
   width: 100px;
@@ -73,21 +76,24 @@ body {
   width: 90%;
   display: flex;
   justify-content: space-around;
-  margin-left: 5%;
-  margin-right: 5%;
+ 
+  margin: auto; 
+  margin-top: 50px;
   list-style: none;
   color: #1e4f96;
 }
+.presforma li{
+  margin-top: 10px;
+}
 .presentation {
   position: absolute;
-  width: 1000px;
-  height: 500px;
+  width: 400px;
+  height: 300px;
   left: 10%;
 }
 .confiance {
   position: absolute;
-  width: 1000px;
-  height: 500px;
+  height: 380px;
   border-left: 3px solid #1e4f96;
   left: 50%;
 }
@@ -105,10 +111,12 @@ body {
 #conftitle {
   margin-left: 15%;
 }
+
 .confformat {
   display: grid;
+  width: 700px;
   grid-template-columns: 25% 25% 25%;
-  grid-template-rows: 60%;
+
   margin-left: 10%;
   list-style: none;
   color: #1e4f96;
@@ -173,4 +181,54 @@ body {
   background-repeat: no-repeat;
   background-color: white;
   border-radius: 100%;
+}
+@media screen and (max-width: 1100px) {
+  .title2{
+font-size: 25px;
+  }
+  .presforma{
+
+font-size: 12px;
+  }
+  .presentation{
+    margin-top: 100px;
+  }
+  .placement{
+    display: grid;
+    width: 700px;
+    grid-template-columns: 25% 25% ;
+    grid-template-rows: 60%;
+  }
+.confiance{
+  margin-top: 100px;
+}
+.confformat{
+  display: grid;
+    width: 400px;
+    grid-template-columns: 50% 50% ;
+  
+    margin-left: 10%;
+    list-style: none;
+    color: #1e4f96;
+}
+.confformat li{
+height: 150px;
+}
+}
+@media screen and (max-width: 1000px) {
+  .confiance{
+    margin-top: 500px;
+    left: 5%;
+    border: none;
+  }
+  .placement{
+    display: grid;
+    width: 500px;
+    grid-template-columns: 25% 25% ;
+    grid-template-rows: 60%;
+  }
+  .rebuild3{
+    margin-left: -40px;
+    width: 200px;
+  }
 }

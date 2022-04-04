@@ -1,0 +1,43 @@
+#bouttonanglais {
+    align-items: center;
+    display: inline-block;
+    background-color: #1e4f96;
+    border-radius: 10px;
+    border: 4px double #cccccc;
+    color: #eeeeee;
+    position: absolute;
+    text-align: center;
+    font-size: 28px;
+    padding: 20px;
+    width: 250px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+   
+    margin-left: 80px;
+  }
+  
+  #bouttonanglais span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  #bouttonanglais span:after {
+    content: "\00bb";
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  #bouttonanglais:hover {
+    background-color: #1e4f96;
+  }
+  #bouttonanglais:hover span {
+    padding-right: 25px;
+  }
+  #bouttonanglais:hover span:after {
+    opacity: 1;
+    right: 0;
+  }

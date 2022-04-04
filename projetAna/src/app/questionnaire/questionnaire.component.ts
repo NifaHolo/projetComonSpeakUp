@@ -749,6 +749,7 @@ export class QuestionnaireComponent implements OnInit {
     //  recap de la note 
       const dialogRef = this.dialog.open(PopupComponent, {
         width: '500px',
+        height:'300px',
         data: { acc_good_answer: acc_good_answer, acc_good_answer2: acc_good_answer2, QuestionsVocab: QuestionsVocab, QuestionsGrammaire: QuestionsGrammaire  },
       });
       dialogRef.afterClosed().subscribe(result => 

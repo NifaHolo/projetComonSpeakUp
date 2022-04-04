@@ -5,7 +5,7 @@
 </div>
 <div id="questionnaires" >
 
-    <form [formGroup]="form" (ngSubmit)="submit()" class="test" name="myform"> 
+    <form [formGroup]="form" (ngSubmit)="submit()" class="Mise-en-form" name="myform"> 
         <section #grammaire>
         <span>
         <h2>Grammar - Choose the best word or phrase to fill each gap.</h2>
@@ -15,7 +15,7 @@
                 <div>
                     <h2> {{question.nom}} </h2>
                     <h3>{{question.grammar}}</h3>
-                    <div class="test2">
+                    <div class="Placement-buttun">
                         <div *ngFor="let reponse of question.reponses; let y = index">
                             <input type="radio" name="Q_{{i +1}}" value="{{y}}" formControlName="Q_{{i +1}}" class="check-with-label" id="idinput{{i}}_{{y}}" required>
                             <label class="radiobuttun" for="idinput{{i}}_{{y}}">
@@ -47,7 +47,7 @@
                 <div>
                     <h2> {{question2.nom2}} </h2>
                     <h3>{{question2.Vocab}}</h3>
-                    <div class="test2">
+                    <div class="Placement-buttun">
                     <div *ngFor="let reponse2 of question2.reponses; let y = index">
                             <input type="radio" name="Q2_{{i +1}}" value="{{y}}" formControlName="Q2_{{i +1}}" class="check-with-label2" id="idinput2{{y}}{{i}}" required="required">
                         <label class="radiobuttun2" for="idinput2{{y}}{{i}}">

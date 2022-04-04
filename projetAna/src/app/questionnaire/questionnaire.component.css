@@ -5,12 +5,12 @@
   text-align: center;
 }
 
-.test{
+.Mise-en-form{
   display: grid;
   grid-template-columns: 80%;
   justify-content: center;
 }
-.test2{
+.Placement-buttun{
 display:grid;
 grid-template-columns: 25% 25% 25% 25%;
 justify-content: space-around;
@@ -75,11 +75,11 @@ justify-content: space-around;
 
 .centerbuttun {
   display: flex;
-  justify-content: center;
+  justify-content:  center;
   list-style: none;
 }
 .centerbuttun li {
-  margin-right: 5%;
+  margin-right: 15%;
 
 }
 #buttunnext {
@@ -94,7 +94,7 @@ justify-content: space-around;
   transition: all 0.5s;
   cursor: pointer;
   margin: 5px;
-  margin-left: 40%;
+
 }
 
 #buttunnext span {
@@ -182,21 +182,20 @@ color:#eeeeee;
 }
 #navigationQuestions{
   display: inline-block;
- 
   position: fixed;
-  top:50%;
-  left: 0;
+  top:88%;
+  right: 0;
   text-align: center;
   transform: translate(0%, -50%); 
   right: 0; 
   width:150px;
 }
-#navigationQuestions a{
-  font-size: 20px;
-  color: #1e4f96;
-  margin:auto;
-  margin-top: 20px;
-  display: inline-block;
-  text-decoration: none;
-  transition: 0.5s;
-  }
+#navigationQuestions button
+{
+  width: 100px;
+  opacity: 80%;
+  background-color: #1e4f96;
+  color:white;
+  border: none;
+  margin-top: 5px;
+}
