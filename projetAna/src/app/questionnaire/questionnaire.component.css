@@ -159,19 +159,12 @@ color:#eeeeee;
 
 }
 
-
-#red {
-  color:rgb(241, 105, 71);
-}
 .show{
   display: flex;
   justify-content: center;
   text-align: center;
 }
 
-#green{
- color:green;
-}
 
 .good-answer-text-decoration{
  color:green;

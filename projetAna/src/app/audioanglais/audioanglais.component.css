@@ -1,13 +1,11 @@
-.title h1 {
-  font-size: 30px;
-}
+
 #questionnaires {
   border-radius: 25px;
   color: #1e4f96;
   text-align: center;
 }
 
-.test{
+.Mise-en-form{
   display: grid;
   grid-template-columns: 80%;
   justify-content: center;
@@ -30,41 +28,17 @@
   width: 200px;
   transition: all 0.5s;
   cursor: pointer;
-  margin: 5px;
-  margin-left: 40%;
-}
-.centerbuttun {
-  display: flex;
-  margin-left: 20%;
-  list-style: none;
-}
-.centerbuttun li {
-  margin-right: 25%;
-  align-items: center;
-  text-align: center;
-}
-#buttunnext {
-  display: inline-block;
-  background-color: #1e4f96;
-  border-radius: 10px;
-  border: 4px double #cccccc;
-  color: #eeeeee;
-  font-size: 28px;
-  padding: 20px;
-  width: 200px;
-  transition: all 0.5s;
-  cursor: pointer;
-  margin: 5px;
-  margin-left: 40%;
+  margin: auto;
+  
 }
 
-#buttunnext span {
+#bouttonanglais span {
   cursor: pointer;
   display: inline-block;
   position: relative;
   transition: 0.5s;
 }
-#buttunnext span:after {
+#bouttonanglais span:after {
   content: "\00bb";
   position: absolute;
   z-index: 1;
@@ -73,13 +47,32 @@
   right: -20px;
   transition: 0.5s;
 }
-#buttunnext:hover {
+#bouttonanglais:hover {
   background-color: #1e4f96;
 }
-#buttunnext:hover span {
+#bouttonanglais:hover span {
   padding-right: 25px;
 }
-#buttunnext:hover span:after {
+#bouttonanglais:hover span:after {
   opacity: 1;
   right: 0;
+}
+
+.Mise-en-form textarea{
+  width: 60%;
+  height: 100px;
+  color:#1e4f96;
+  border: solid 1px black;
+  margin-bottom: 20px;
+}
+.title {
+  position: flex;
+  margin-top: 5%;
+  text-align: center;
+  color: #1e4f96;
+  font-weight: bold;
+  font-size: 25px;
+}
+.title h1 {
+  font-size: 30px;
 }

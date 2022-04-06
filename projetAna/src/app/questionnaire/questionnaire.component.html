@@ -4,83 +4,72 @@
     <h1>Langue - Anglais</h1>
 </div>
 <div id="questionnaires" >
-
     <form [formGroup]="form" (ngSubmit)="submit()" class="Mise-en-form" name="myform"> 
         <section #grammaire>
-        <span>
-        <h2>Grammar - Choose the best word or phrase to fill each gap.</h2>
-    </span>
-    <h2></h2>
+            <span>
+                <h2>Grammar - Choose the best word or phrase to fill each gap.</h2>
+            </span>
             <div *ngFor="let question of questions; let i = index" class ="grid">
-                <div>
-                    <h2> {{question.nom}} </h2>
-                    <h3>{{question.grammar}}</h3>
-                    <div class="Placement-buttun">
-                        <div *ngFor="let reponse of question.reponses; let y = index">
-                            <input type="radio" name="Q_{{i +1}}" value="{{y}}" formControlName="Q_{{i +1}}" class="check-with-label" id="idinput{{i}}_{{y}}" required>
-                            <label class="radiobuttun" for="idinput{{i}}_{{y}}">
-                                {{reponse}}
-                            </label>
-                        </div>
+                <h2> {{question.nom}} </h2>
+                <h3>{{question.grammar}}</h3>
+                <div class="Placement-buttun">
+                    <div *ngFor="let reponse of question.reponses; let y = index">
+                        <input type="radio" name="Q_{{i +1}}" value="{{y}}" formControlName="Q_{{i +1}}" class="check-with-label" id="idinput{{i}}_{{y}}" required>
+                        <label class="radiobuttun" for="idinput{{i}}_{{y}}">
+                            {{reponse}}
+                        </label>
                     </div>
-                    <div *ngIf="showAnswer" class="show">
-                        <div >
-                            <p  class="good-answer-text-decoration" *ngIf="question.bonneReponses == question.reponsesUser" >Bonne réponse !</p>
-                            <p class="wrong-answer-text-decoration" *ngIf="question.bonneReponses != question.reponsesUser && question.reponsesUser != -1">Mauvaise réponse ! </p>
-
-                        </div>
-                    </div>
-                    <div *ngIf="showforgetAnswer" class="show">
-                        <div id="red">
-                            <p *ngIf="question.reponsesUser == -1">Réponse oublié ! </p>
-                        </div>
-                    </div> 
-                    <br>
                 </div>
+                <div *ngIf="showAnswer" class="show">
+                    <p class="good-answer-text-decoration" *ngIf="question.bonneReponses == question.reponsesUser" >Bonne réponse !</p>
+                    <p class="wrong-answer-text-decoration" *ngIf="question.bonneReponses != question.reponsesUser && question.reponsesUser != -1">Mauvaise réponse ! </p>
+                </div>
+                <div *ngIf="showforgetAnswer" class="show">
+                    <div class="wrong-answer-text-decoration">
+                        <p *ngIf="question.reponsesUser == -1">Réponse oublié ! </p>
+                    </div>
+                </div> 
+                <br>
             </div>
         </section>
         <section #vocabulaire>
             <span>
                 <h1>Vocab - Choose the best word or phrase to fill each gap.</h1>
             </span>
-            <div *ngFor="let question2 of questions2; let i = index"  class ="grid">
-                <div>
-                    <h2> {{question2.nom2}} </h2>
-                    <h3>{{question2.Vocab}}</h3>
-                    <div class="Placement-buttun">
+            <div *ngFor="let question2 of questions2; let i = index"class ="grid">
+                <h2> {{question2.nom2}} </h2>
+                <h3>{{question2.Vocab}}</h3>
+                <div class="Placement-buttun">
                     <div *ngFor="let reponse2 of question2.reponses; let y = index">
-                            <input type="radio" name="Q2_{{i +1}}" value="{{y}}" formControlName="Q2_{{i +1}}" class="check-with-label2" id="idinput2{{y}}{{i}}" required="required">
+                        <input type="radio" name="Q2_{{i +1}}" value="{{y}}" formControlName="Q2_{{i +1}}" class="check-with-label2" id="idinput2{{y}}{{i}}" required="required">
                         <label class="radiobuttun2" for="idinput2{{y}}{{i}}">
                             {{reponse2}}
                         </label>
                     </div>
                 </div>
-                    <div *ngIf="showAnswer">
-                        <p *ngIf="question2.bonneReponses == question2.reponsesUser" id="green">Bonne réponse !</p>
-                    </div>
+                <div *ngIf="showAnswer">
+                    <p *ngIf="question2.bonneReponses == question2.reponsesUser" class="good-answer-text-decoration">Bonne réponse !</p>
+                </div>
                 <div *ngIf="showforgetAnswer" class="show">
-                    <div id="red">
+                    <div class="wrong-answer-text-decoration">
                         <p *ngIf="question2.reponsesUser == -1">Réponse oublié ! </p>
                     </div>
                 </div>
                 <div *ngIf="showAnswer" class="show">
-                    <div id="red">
-                        <p *ngIf="question2.bonneReponses != question2.reponsesUser && question2.reponsesUser != -1">Mauvaise réponse !</p>  
+                    <div class="wrong-answer-text-decoration">
+                        <p *ngIf="question2.bonneReponses != question2.reponsesUser && question2.reponsesUser != -1">Mauvaise réponse !</p>
                     </div>
                 </div>
-                    <br>
-                    
-                </div>
+                <br>
             </div>
         </section>
     </form>
     <ul class="centerbuttun">
         <li>
             <!-- disable le bouton quand cliquer -->
-            
-        <button id="bouttonanglais"  [disabled]="showAnswer"   type="submit" (click)="submit();" #submitButton>
-            <span>Envoyer !</span>
-        </button>
+            <button id="bouttonanglais"[disabled]="showAnswer" type="submit" (click)="submit();" #submitButton>
+                <span>Envoyer !</span>
+            </button>
         </li>
         <li>
             <a href="audioanglais">

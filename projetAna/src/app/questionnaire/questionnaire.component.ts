@@ -9,6 +9,7 @@ import {
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { PopupComponent } from './popup/popup.component';
 
+declare let Email: any;
 
 
 @Component({
@@ -44,37 +45,37 @@ export class QuestionnaireComponent implements OnInit {
       bonneReponses: 1,
       reponsesUser : -1
     },
-    {
-      nom: "Question 3 :",
-      grammar: "Mark ______ in London.",
-      reponses:[ "a. is work",
-       "b. work",
-       "c. working",
-      "d. works"],
-      bonneReponses: 3,
-      reponsesUser : -1
-    },
-    {
-      nom: "Question 4 :",
-      grammar: "Where ______?",
-      reponses:[ "a. live you",
-       "b. do you live",
-       "c. you live",
-        "d. does you live"],
-      bonneReponses:1,
-      reponsesUser : -1
-    },
-    {
-      nom: "Question 5 :",
-      grammar: "I ______ rain.",
-      reponses:[ "a. not like",
-       "b. like not",
-       "c. no like",
-        "d. don’t like",
-      ],
-      bonneReponses: 3,
-      reponsesUser : -1
-    },
+    // {
+    //   nom: "Question 3 :",
+    //   grammar: "Mark ______ in London.",
+    //   reponses:[ "a. is work",
+    //    "b. work",
+    //    "c. working",
+    //   "d. works"],
+    //   bonneReponses: 3,
+    //   reponsesUser : -1
+    // },
+    // {
+    //   nom: "Question 4 :",
+    //   grammar: "Where ______?",
+    //   reponses:[ "a. live you",
+    //    "b. do you live",
+    //    "c. you live",
+    //     "d. does you live"],
+    //   bonneReponses:1,
+    //   reponsesUser : -1
+    // },
+    // {
+    //   nom: "Question 5 :",
+    //   grammar: "I ______ rain.",
+    //   reponses:[ "a. not like",
+    //    "b. like not",
+    //    "c. no like",
+    //     "d. don’t like",
+    //   ],
+    //   bonneReponses: 3,
+    //   reponsesUser : -1
+    // },
     // {
     //   nom: "Question 6 :",
     //   grammar: "Katrina doesn’t like ______ in the morning.",
@@ -385,61 +386,61 @@ export class QuestionnaireComponent implements OnInit {
 ,
       reponsesUser : -1
     },
-    {
-      nom2: "Question 3 :",
-      Vocab: "I ______ home at 6 o’clock every day.",
-      reponses:[ "a. get",
-      "b. move",
-       "c. open",
-        "d. live"],
-      bonneReponses: 0
-,
-      reponsesUser : -1
-    },
-    {
-      nom2: "Question 4 :",
-      Vocab: "Jane usually ______ shopping on Saturdays.",
-      reponses:[ "a. makes",
-      "b. has",
-       "c. goes",
-        "d. takes"],
-      bonneReponses: 2
-,
-      reponsesUser : -1
-    },
-    {
-      nom2: "Question 5 :",
-      Vocab: "I always ______ TV in the evening.",
-      reponses:[ "a. watch",
-      "b. see",
-       "c. look",
-        "d. hear"],
-      bonneReponses: 0
-,
-      reponsesUser : -1
-    },
-    {
-      nom2: "Question 6 :",
-      Vocab: "Peter never ______ the dishes after dinner.",
-      reponses:[ "a. makes",
-      "b. does",
-       "c. takes",
-        "d. runs"],
-      bonneReponses: 1
-,
-      reponsesUser : -1
-    },
-    {
-      nom2: "Question 7 :",
-      Vocab: "I never ______ rock music.",
-      reponses:[ "a. hear",
-      "b. see",
-       "c. listen to",
-        "d. feel"],
-      bonneReponses: 2
-,
-      reponsesUser : -1
-    },
+//     {
+//       nom2: "Question 3 :",
+//       Vocab: "I ______ home at 6 o’clock every day.",
+//       reponses:[ "a. get",
+//       "b. move",
+//        "c. open",
+//         "d. live"],
+//       bonneReponses: 0
+// ,
+//       reponsesUser : -1
+//     },
+//     {
+//       nom2: "Question 4 :",
+//       Vocab: "Jane usually ______ shopping on Saturdays.",
+//       reponses:[ "a. makes",
+//       "b. has",
+//        "c. goes",
+//         "d. takes"],
+//       bonneReponses: 2
+// ,
+//       reponsesUser : -1
+//     },
+//     {
+//       nom2: "Question 5 :",
+//       Vocab: "I always ______ TV in the evening.",
+//       reponses:[ "a. watch",
+//       "b. see",
+//        "c. look",
+//         "d. hear"],
+//       bonneReponses: 0
+// ,
+//       reponsesUser : -1
+//     },
+//     {
+//       nom2: "Question 6 :",
+//       Vocab: "Peter never ______ the dishes after dinner.",
+//       reponses:[ "a. makes",
+//       "b. does",
+//        "c. takes",
+//         "d. runs"],
+//       bonneReponses: 1
+// ,
+//       reponsesUser : -1
+//     },
+//     {
+//       nom2: "Question 7 :",
+//       Vocab: "I never ______ rock music.",
+//       reponses:[ "a. hear",
+//       "b. see",
+//        "c. listen to",
+//         "d. feel"],
+//       bonneReponses: 2
+// ,
+//       reponsesUser : -1
+//     },
 //     {
 //       nom2: "Question 8 :",
 //       Vocab: "I always ______ sightseeing when I travel.",
@@ -636,6 +637,7 @@ export class QuestionnaireComponent implements OnInit {
 
   constructor(private formBuilder: FormBuilder, public dialog: MatDialog) {
 
+
     var form = this.createArrayForm();
    
    
@@ -754,7 +756,19 @@ export class QuestionnaireComponent implements OnInit {
       });
       dialogRef.afterClosed().subscribe(result => 
         {
-        console.log('The dialog was closed');
+
+        Email.send({
+          Host: "smtp.netcorecloud.net",
+          Username: "questionnaireanamailauto",
+          Password: "questionnaireanamailauto_9243500db2b77467a4eaf7ee3d625d78",
+          To: 'julien.leconte2002@gmail.com',
+          From: "questionnaireanamailauto@pepisandbox.com",
+          Subject: "This is the sqsdqdsqdsqsdubject",
+          Body: "And this is theqsdqdqdsqds body"
+        }).then((message: any) => {
+          alert(message);
+
+        });
         });
 
     }

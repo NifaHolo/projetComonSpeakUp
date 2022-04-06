@@ -297,13 +297,12 @@ line-height: 50px;
   }
   #menuToggle #span1 {
   
-  
     transform: rotate(45deg) translate(50px, -90px);
   }
   
   #menuToggle #span2 {
-  
-    transform: rotate(-45deg) translate(105px, 40px);
+
+    transform: rotate(-45deg) translate(104px, 41px);
   }
   #menuToggle input{
    right: 190px;

@@ -20,7 +20,10 @@ const appRoutes: Routes = [
   { path : 'descniv'       , component:DescnivComponent },
   { path : 'acceuil'       , component:AccueilComponent },
   { path : 'audioanglais'       , component:AudioanglaisComponent },
-]
+  { path: '', redirectTo: '/acceuil', pathMatch: 'full' }, // redirect to `acceuil`
+  { path: '**', redirectTo: '/acceuil', pathMatch: 'full' },  // Wildcard route for a 404 page
+];
+
 
 @NgModule({
   declarations: [

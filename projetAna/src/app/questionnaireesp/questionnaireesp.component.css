@@ -4,18 +4,16 @@
   text-align: center;
 }
 
-.test{
+.Mise-en-form{
   display: grid;
   grid-template-columns: 80%;
   justify-content: center;
 }
-.test2{
+.Placement-buttun{
 display:grid;
 grid-template-columns: 25% 25% 25% 25%;
 justify-content: space-around;
 }
-
-
 .grid{
   background-color: rgb(249, 250, 251);
   border-radius: 15px;
@@ -105,14 +103,35 @@ color:#eeeeee;
 
   font-size: 25px;
 }
-#red {
-  color:rgb(241, 105, 71);
-}
+
 .show{
   display: flex;
   justify-content: center;
   text-align: center;
 }
+.good-answer-text-decoration{
+ color:green;
+}
 
-#green{
- color:green;}
+.wrong-answer-text-decoration{
+ color:rgb(241, 105, 71);
+}
+#navigationQuestions{
+  display: inline-block;
+  position: fixed;
+  top:88%;
+  right: 0;
+  text-align: center;
+  transform: translate(0%, -50%); 
+  right: 0; 
+  width:150px;
+}
+#navigationQuestions button
+{
+  width: 100px;
+  opacity: 80%;
+  background-color: #1e4f96;
+  color:white;
+  border: none;
+  margin-top: 5px;
+}
