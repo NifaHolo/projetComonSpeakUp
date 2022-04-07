@@ -135,3 +135,10 @@ color:#eeeeee;
   border: none;
   margin-top: 5px;
 }
+@media screen and (max-width: 600px) {
+  #bouttonanglais {
+    width: 150px;
+    font-size: 15px;
+  }
+
+}

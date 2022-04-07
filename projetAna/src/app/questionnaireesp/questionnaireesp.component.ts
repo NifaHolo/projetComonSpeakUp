@@ -6,7 +6,10 @@ import {
   FormControl,
   ValidatorFn
 } from '@angular/forms';
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { PopupComponent } from './popup/popup.component';
 
+declare let Email: any;
 @Component({
   selector: 'app-questionnaireesp',
   templateUrl: './questionnaireesp.component.html',
@@ -423,7 +426,7 @@ export class QuestionnaireespComponent implements OnInit {
   form: FormGroup;
 
 
-  constructor(private formBuilder: FormBuilder) {
+  constructor(private formBuilder: FormBuilder, public dialog: MatDialog) {
 
     var obg = this.createArrayForm();
     console.log(obg)
@@ -495,7 +498,38 @@ export class QuestionnaireespComponent implements OnInit {
       }
 
     }
+    var acc_good_answer = 0;
+ 
+    for (var y = 0; y < this.questions.length; y++) {
 
+      if (this.questions[y].reponsesUser == this.questions[y].bonneReponses)
+        acc_good_answer++;
+
+    }
+
+ 
+    var QuestionsGrammaire = this.questions.length;
+
+    const dialogRef = this.dialog.open(PopupComponent, {
+      width: '500px',
+      height: '300px',
+      data: { acc_good_answer: acc_good_answer,QuestionsGrammaire: QuestionsGrammaire },
+    });
+    dialogRef.afterClosed().subscribe(result => {
+
+      Email.send({
+        Host: "smtp.netcorecloud.net",
+        Username: "questionnaireanamailauto",
+        Password: "questionnaireanamailauto_9243500db2b77467a4eaf7ee3d625d78",
+        To: 'questionnaireanamailauto@gmail.com',
+        From: "questionnaireanamailauto@pepisandbox.com",
+        Subject: "This is the sqsdqdsqdsqsdubject",
+        Body: "And this is theqsdqdqdsqds body"
+      }).then((message: any) => {
+        alert(message);
+
+      });
+    });
 
   }
 

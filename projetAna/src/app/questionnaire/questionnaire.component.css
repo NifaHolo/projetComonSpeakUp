@@ -176,11 +176,10 @@ color:#eeeeee;
 #navigationQuestions{
   display: inline-block;
   position: fixed;
-  top:88%;
-  right: 0;
+  top:87%;
+  left: 0;
   text-align: center;
   transform: translate(0%, -50%); 
-  right: 0; 
   width:150px;
 }
 #navigationQuestions button
@@ -191,4 +190,14 @@ color:#eeeeee;
   color:white;
   border: none;
   margin-top: 5px;
+}
+@media screen and (max-width: 600px) {
+  #bouttonanglais {
+    width: 125px;
+    font-size: 13px;
+  }
+  #buttunnext {
+    width: 150px;
+    font-size: 13px;
+  }
 }

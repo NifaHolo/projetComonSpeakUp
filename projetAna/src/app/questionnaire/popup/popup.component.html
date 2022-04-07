@@ -1,8 +1,10 @@
 <form [formGroup]="form" class="Mise-en-form" name="myform">
-    <input class="name" type="text" name="nom" [(ngModel)]="toto" formControlName="nom" placeholder="name..">
-    <p>{{toto}} voici votre score :</p>
-    <h2 mat-dialog-title>Grammaire : {{data.acc_good_answer}} bonne réponse / {{data.QuestionsGrammaire}} questions</h2>
-    <h2 mat-dialog-title>Vocab : {{data.acc_good_answer2}} bonne réponse / {{data.QuestionsVocab}} questions</h2>
+    <div class="centerarea">
+        <input class="name" type="text" name="nom" [(ngModel)]="toto" formControlName="nom" placeholder="name..">
+    </div>
+    <p>Bonjour {{toto}},</p><p> voici votre score :</p>
+    <p mat-dialog-title>Grammaire :</p><p> {{data.acc_good_answer}} bonne réponse / {{data.QuestionsGrammaire}} questions</p>
+    <p mat-dialog-title>Vocab : </p><p>{{data.acc_good_answer2}} bonne réponse / {{data.QuestionsVocab}} questions</p>
     
 </form>
 <div mat-dialog-actions>

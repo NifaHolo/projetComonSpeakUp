@@ -11,21 +11,24 @@ import { PopupComponent } from './popup/popup.component';
 
 declare let Email: any;
 
+export interface popup {
+  toto: string;
+}
 
 @Component({
   selector: "app-questionnaire",
   templateUrl: "./questionnaire.component.html",
   styleUrls: ["./questionnaire.component.css"]
 })
+
 export class QuestionnaireComponent implements OnInit { 
 
-
   title = "projetAna";
-  
   //  Etat d'afficheage desse
   showAnswer = false;
   showforgetAnswer = false;
   //  Liste des questions vocabulaires
+  toto="";
   questions = [
     {
       nom: "Question 1 :",
@@ -637,32 +640,14 @@ export class QuestionnaireComponent implements OnInit {
 
   constructor(private formBuilder: FormBuilder, public dialog: MatDialog) {
 
-
     var form = this.createArrayForm();
-   
-   
+    
     this.form = this.formBuilder.group(
-      form,    
+      form,   
     );
-   
+
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
   scroll(el: HTMLElement) {
     el.scrollIntoView({ behavior: 'smooth' });
   }
@@ -743,16 +728,20 @@ export class QuestionnaireComponent implements OnInit {
             acc_good_answer2++;
 
         }
-       var QuestionsGrammaire = this.questions.length;
-       var QuestionsVocab = this.questions2.length;      
+      var QuestionsGrammaire = this.questions.length;
+      var QuestionsVocab = this.questions2.length;      
+      var QuestionsTotal = this.questions.length + this.questions2.length;    
+      var acc_good_answer3 = acc_good_answer2 + acc_good_answer;
+
       // alert("Un mail a été envoyer a votre profésseur d'anglais Ana Maselli votre notation est :" + "gammaire : " + acc_good_answer + " / " + QuestionsGrammaire + "Vocab : " + acc_good_answer2 + " / " + QuestionsVocab + "Vous pouvez vérifier vos érreurs ou cliquer sur le boutton suivant pour aller sur le prochain test."); 
 
     //  afficher un message de confirmtion
     //  recap de la note 
       const dialogRef = this.dialog.open(PopupComponent, {
         width: '500px',
-        height:'300px',
-        data: { acc_good_answer: acc_good_answer, acc_good_answer2: acc_good_answer2, QuestionsVocab: QuestionsVocab, QuestionsGrammaire: QuestionsGrammaire  },
+        height:'400px',
+       
+        data: { acc_good_answer: acc_good_answer, acc_good_answer2: acc_good_answer2, QuestionsVocab: QuestionsVocab, QuestionsGrammaire: QuestionsGrammaire, toto: this.toto},
       });
       dialogRef.afterClosed().subscribe(result => 
         {
@@ -761,13 +750,19 @@ export class QuestionnaireComponent implements OnInit {
           Host: "smtp.netcorecloud.net",
           Username: "questionnaireanamailauto",
           Password: "questionnaireanamailauto_9243500db2b77467a4eaf7ee3d625d78",
-          To: 'julien.leconte2002@gmail.com',
+          To: 'questionnaireanamailauto@gmail.com',
           From: "questionnaireanamailauto@pepisandbox.com",
-          Subject: "This is the sqsdqdsqdsqsdubject",
-          Body: "And this is theqsdqdqdsqds body"
+          Subject: "Réponses questionnaire grammaire/vocab Anglais de nomdelapersonne",
+          Body: 
+          "Réponses questionnaire grammaire/vocab Anglais de nomdelapersonne <br>" +
+            "Score grammaire: " + acc_good_answer + " bonne réponses / " + QuestionsGrammaire + " questions <br>" +
+            "Score grammaire: " + acc_good_answer2 + " bonne réponses / " + QuestionsVocab + " questions <br>" +
+            "Score total: " + acc_good_answer3 + " bonne réponses / " + QuestionsTotal + " questions <br>" +
+            this.questions[0].nom + " " + this.questions[0].grammar + " a répondu : " + this.questions[0].reponses[this.questions[0].reponsesUser]  + "<br>" +
+            this.questions[1].nom + " " + this.questions[1].grammar + " a répondu : " + this.questions[1].reponses[this.questions[1].reponsesUser] + "<br>"       
         }).then((message: any) => {
           alert(message);
-
+          console.log(this.questions)
         });
         });
 

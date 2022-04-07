@@ -185,6 +185,7 @@ body {
 @media screen and (max-width: 1100px) {
   .title2{
 font-size: 25px;
+
   }
   .presforma{
 
@@ -192,13 +193,30 @@ font-size: 12px;
   }
   .presentation{
     margin-top: 100px;
+    width: 80%;
   }
   .placement{
     display: grid;
-    width: 700px;
-    grid-template-columns: 25% 25% ;
+    width: 100%;
+    grid-template-columns: 50% 50% ;
     grid-template-rows: 60%;
+    text-align: center;
   }
+    .imglogo1 {
+      margin: auto;
+    }
+    
+    .imglogo2 {
+      margin: auto;
+    }
+    
+    .imglogo3 {
+      margin: auto;
+    }
+    
+    .imglogo4 {
+      margin: auto;
+    }
 .confiance{
   margin-top: 100px;
 }
@@ -214,21 +232,83 @@ font-size: 12px;
 .confformat li{
 height: 150px;
 }
+  .rebuild3 {
+    margin-left: 40px;
+    width: 200px;
+  }
 }
 @media screen and (max-width: 1000px) {
+
   .confiance{
-    margin-top: 500px;
+    margin-top: 600px;
     left: 5%;
     border: none;
   }
+  .imglogo1{
+    margin: auto;
+  }
+  .imglogo2 {
+    margin: auto;
+  }.imglogo3 {
+    margin: auto;
+  }.imglogo4 {
+    margin: auto;
+  }
   .placement{
     display: grid;
-    width: 500px;
-    grid-template-columns: 25% 25% ;
+    width: 100%;
+    grid-template-columns: 50% 50% ;
     grid-template-rows: 60%;
+    text-align: center;
   }
   .rebuild3{
-    margin-left: -40px;
+    margin-left: 90px;
     width: 200px;
   }
+}
+@media screen and (max-width: 500px) {
+  .title2 {
+    text-align: center;
+    margin-bottom:25px;
+  }
+  .rebuild3 {
+    margin-left:-15px;
+    width: 200px;
+  }
+  .confiance{
+    position: static;
+  }
+  .confformat{
+    width: 100%;
+    margin-left: 5%;
+  }
+.confiance1 {
+  width: 100px;
+  height: 100px;
+}
+.confiance2 {
+  width: 100px;
+  height: 100px;
+}
+.confiance3 {
+  width: 100px;
+  height: 100px;
+}
+.confiance4 {
+  width: 100px;
+  height: 100px;
+}
+.confiance5 {
+  width: 100px;
+  height: 100px;
+}
+.confiance6 {
+  width: 100px;
+  height: 100px;
+}
+@media screen and (max-width: 400px) {
+#title1{
+font-size: 54px;
+}
+}
 }

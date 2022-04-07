@@ -1,0 +1,9 @@
+
+    <form class="Mise-en-form">
+    <input class="name" type="text" name="nom" formControlName="nom" placeholder="name..">
+    <p>Bonjour {{toto}},</p><p> voici votre score :</p>
+    <p mat-dialog-title>Grammaire :</p><p> {{data.acc_good_answer}} bonne réponse / {{data.QuestionsGrammaire}} questions</p>
+    </form>
+<div mat-dialog-actions class="centerbuttun">
+        <button mat-button (click)="onNoClick()" id="bouttonanglais">D'accord</button>
+    </div>

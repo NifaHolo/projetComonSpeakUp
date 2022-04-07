@@ -1,6 +1,6 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { QuestionnaireComponent } from '../questionnaire.component';
+import { QuestionnaireespComponent } from '../questionnaireesp.component';
 import {
   FormBuilder,
   FormGroup,
@@ -15,8 +15,8 @@ import {
   styleUrls: ['./popup.component.css']
 })
 export class PopupComponent implements OnInit {
-nom = '';
-toto = '';
+  nom = '';
+  toto = '';
   form: FormGroup;
 
   constructor(
@@ -33,7 +33,7 @@ toto = '';
         nom: this.nom
       }
     );
-   }
+  }
 
   onNoClick() {
     console.log(this.form.value.nom)

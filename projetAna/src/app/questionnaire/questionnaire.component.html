@@ -5,6 +5,7 @@
 </div>
 <div id="questionnaires" >
     <form [formGroup]="form" (ngSubmit)="submit()" class="Mise-en-form" name="myform"> 
+
         <section #grammaire>
             <span>
                 <h2>Grammar - Choose the best word or phrase to fill each gap.</h2>
@@ -79,9 +80,9 @@
             </a>
         </li>
     </ul>
+    <p>{{toto}}</p>
     <div id="navigationQuestions">
         <button (click)="scroll(grammaire)">Grammar</button><br>
         <button (click)="scroll(vocabulaire)">Vocab</button><br>
-        <button (click)="scroll(questionnaires)">Haut de page</button>
     </div>
 </div>

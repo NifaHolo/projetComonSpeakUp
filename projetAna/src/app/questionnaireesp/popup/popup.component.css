@@ -1,19 +1,19 @@
 #bouttonanglais {
-    align-items: center;
-    display: inline-block;
-    background-color: #1e4f96;
-    border-radius: 10px;
-    border: 4px double #cccccc;
-    color: #eeeeee;
+  align-items: center;
+  display: inline-block;
+  background-color: #1e4f96;
+  border-radius: 10px;
+  border: 4px double #cccccc;
+  color: #eeeeee;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: auto;
+}
+  .centerbuttun {
     text-align: center;
-    font-size: 28px;
-    padding: 20px;
-    transition: all 0.5s;
-    cursor: pointer;
-    margin: auto;
-  }
-  .centerbuttun{
-    text-align: center  ;
   }
   #bouttonanglais span {
     cursor: pointer;
@@ -29,7 +29,6 @@
     right: -20px;
     transition: 0.5s;
   }
-  .centerarea{text-align: center;}
   #bouttonanglais:hover {
     background-color: #1e4f96;
   }
@@ -40,10 +39,9 @@
     opacity: 1;
     right: 0;
   }
-  .Mise-en-form{
-text-align: center;
-  }
-  
+    .Mise-en-form {
+      text-align: center;
+    }
 @media screen and (max-width: 600px) {
     #bouttonanglais {
       width: 150px;
@@ -53,5 +51,10 @@ text-align: center;
       color:#1e4f96;
       font-size: 20px;
     }
-
+    .name{
+      margin: auto;
+      text-align: center;
+      margin-left: 20%;
+      margin-bottom: 20px;
+    }
   }

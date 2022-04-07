@@ -29,12 +29,12 @@
             </div>
         </section> 
     </form> 
-    <button id="bouttonanglais" [disabled]="showAnswer" type="submit" (click)="submit();" #submitButton>
+    <button id="bouttonanglais" [disabled]="showAnswer" type="submit" (click)="submit();" #basdepage>
     <span>Envoyer !</span>
     </button>
     
     <div id="navigationQuestions">
         <button (click)="scroll(grammaire)">Grammar</button><br>
-        <button (click)="scroll(questionnaires)">Haut de page</button>
+        <button (click)="scroll(basdepage)">Haut de page</button>
     </div>
 </div>
