@@ -1,17 +1,25 @@
 
-    <div class="title" #questionnaires>
-        <h1>Questionnaire</h1>
-        <h1>Langue - Anglais</h1>
-    </div>
-    <div id="questionnaires">   
+<div class="title" #questionnaires>
+    <h1>Questionnaire</h1>
+    <h1>Langue - Anglais</h1>
+</div>
+<div id="questionnaires">   
     <form [formGroup]="form" (ngSubmit)="submit()" class="Mise-en-form" name="myform">
-    <span>
-        <h1>Audio</h1>
-    </span>
-    <h2>Choose the best word or phrase to fill each gap.</h2>
-  
+        <span>
+            <h2>Votre nom :</h2>
+        <input class="name" type="text" name="name" formControlName="name" required>
+        <div *ngIf="showforgetAnswer" class="show">
+            <div class="wrong-answer-text-decoration">
+                <p *ngIf="name == -1">Nom oublié !</p>
+            </div>
+        </div>
+        </span>
+        <span>
+            <h1>Audio</h1>
+        </span>
+        <h2>Choose the best word or phrase to fill each gap.</h2>
         <div *ngFor="let audio of audio; let i = index" class="list-group-item" class ="grid">
-                <h2> {{audio.numero}} </h2>
+            <h2> {{audio.numero}} </h2>
             <figure>
                 <audio controls src="{{audio.source}}">
                     Your browser does not support the
@@ -19,14 +27,16 @@
                 </audio>
             </figure>   
             <textarea name="Q_{{i +1}}" value="{{i}}" formControlName="Q_{{i +1}}"></textarea>
-         
-    </div></form>
-        <button id="bouttonanglais" type="submit" (click)="submit();" #submitButton>
-            <span>Envoyer !</span>
-        </button>
-        <div *ngFor="let audio of audio; let i = index" class="list-group-item" class="grid">
-<p>{{audio.reponseUser}}</p>
-            </div>  
-      
-    
+            <div *ngIf="showforgetAnswer" class="show">
+                <div class="wrong-answer-text-decoration">
+                    <p *ngIf="audio.reponseUser == -1">Réponse oublié ! </p>
+                </div>
+            </div>
+            <br>
+        </div>
+    </form>
+  
+    <button id="bouttonanglais" type="submit" (click)="submit();" #submitButton>
+        <span>Envoyer !</span>
+    </button> 
 </div>

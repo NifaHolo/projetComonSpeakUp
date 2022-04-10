@@ -1,6 +1,6 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { QuestionnaireespComponent } from '../questionnaireesp.component';
+import { AudioanglaisComponent } from '../audioanglais.component';
 import {
   FormBuilder,
   FormGroup,
@@ -8,17 +8,21 @@ import {
   FormControl,
   ValidatorFn
 } from '@angular/forms';
+declare let Email: any;
 
 @Component({
   selector: 'app-popup',
   templateUrl: './popup.component.html',
   styleUrls: ['./popup.component.css']
 })
+
 export class PopupComponent implements OnInit {
-  constructor(
+
+    constructor(
     public dialogRef: MatDialogRef<PopupComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any,
-  ) {}
+    private formBuilder: FormBuilder
+  ) { }
 
   onNoClick() {
     this.dialogRef.close();

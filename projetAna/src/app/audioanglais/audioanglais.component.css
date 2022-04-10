@@ -18,18 +18,18 @@
   text-align: center;
 }
 #bouttonanglais {
+  align-items: center;
   display: inline-block;
   background-color: #1e4f96;
   border-radius: 10px;
   border: 4px double #cccccc;
   color: #eeeeee;
+  text-align: center;
   font-size: 28px;
   padding: 20px;
-  width: 200px;
   transition: all 0.5s;
   cursor: pointer;
   margin: auto;
-  
 }
 
 #bouttonanglais span {
@@ -38,21 +38,24 @@
   position: relative;
   transition: 0.5s;
 }
+
 #bouttonanglais span:after {
   content: "\00bb";
   position: absolute;
-  z-index: 1;
   opacity: 0;
   top: 0;
   right: -20px;
   transition: 0.5s;
 }
+
 #bouttonanglais:hover {
   background-color: #1e4f96;
 }
+
 #bouttonanglais:hover span {
   padding-right: 25px;
 }
+
 #bouttonanglais:hover span:after {
   opacity: 1;
   right: 0;
@@ -60,7 +63,7 @@
 
 .Mise-en-form textarea{
   width: 60%;
-  height: 100px;
+  height: 50px;
   color:#1e4f96;
   border: solid 1px black;
   margin-bottom: 20px;
@@ -75,4 +78,26 @@
 }
 .title h1 {
   font-size: 30px;
+}
+.wrong-answer-text-decoration {
+  color: rgb(241, 105, 71);
+}
+@media screen and (max-width: 600px) {
+  #bouttonanglais {
+    width: 125px;
+    font-size: 13px;
+  }
+
+  #buttunnext {
+    width: 150px;
+    font-size: 13px;
+  }
+
+  .radiobuttun2 {
+    font-weight: lighter;
+  }
+
+  .radiobuttun {
+    font-weight: lighter;
+  }
 }

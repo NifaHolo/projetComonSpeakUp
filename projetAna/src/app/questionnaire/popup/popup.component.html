@@ -1,12 +1,8 @@
-<form [formGroup]="form" class="Mise-en-form" name="myform">
-    <div class="centerarea">
-        <input class="name" type="text" name="nom" [(ngModel)]="toto" formControlName="nom" placeholder="name..">
-    </div>
-    <p>Bonjour {{toto}},</p><p> voici votre score :</p>
+<form class="Mise-en-form" >
+    <p>Bonjour {{data.name}},</p><p> voici votre score :</p>
     <p mat-dialog-title>Grammaire :</p><p> {{data.acc_good_answer}} bonne réponse / {{data.QuestionsGrammaire}} questions</p>
     <p mat-dialog-title>Vocab : </p><p>{{data.acc_good_answer2}} bonne réponse / {{data.QuestionsVocab}} questions</p>
-    
 </form>
-<div mat-dialog-actions>
-        <button mat-button (click)="onNoClick()" id="bouttonanglais">D'accord</button>
-    </div>
+<div mat-dialog-actions class="Mise-en-form">
+    <button mat-button (click)="onNoClick()" id="bouttonanglais">D'accord</button>
+</div>

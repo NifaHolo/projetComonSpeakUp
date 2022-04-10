@@ -1,0 +1,70 @@
+#bouttonanglais {
+  align-items: center;
+  display: inline-block;
+  background-color: #1e4f96;
+  border-radius: 10px;
+  border: 4px double #cccccc;
+  color: #eeeeee;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: auto;
+}
+
+.centerbuttun {
+  text-align: center;
+}
+
+#bouttonanglais span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+#bouttonanglais span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.centerarea {
+  text-align: center;
+}
+
+#bouttonanglais:hover {
+  background-color: #1e4f96;
+}
+
+#bouttonanglais:hover span {
+  padding-right: 25px;
+}
+
+#bouttonanglais:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.Mise-en-form {
+  text-align: center;
+}
+
+p {
+  color: #1e4f96;
+}
+@media screen and (max-width: 600px) {
+    #bouttonanglais {
+      width: 150px;
+      font-size: 20px;
+    }
+    p{
+      color:#1e4f96;
+      font-size: 20px;
+    }
+
+  }

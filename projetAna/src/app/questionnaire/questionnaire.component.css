@@ -25,18 +25,18 @@ justify-content: space-around;
   font-size: 30px;
 }
 #bouttonanglais {
+  align-items: center;
   display: inline-block;
   background-color: #1e4f96;
   border-radius: 10px;
   border: 4px double #cccccc;
   color: #eeeeee;
+  text-align: center;
   font-size: 28px;
   padding: 20px;
-  width: 200px;
   transition: all 0.5s;
   cursor: pointer;
-  margin: 5px;
-  margin-left: 40%;
+  margin: auto;
 }
 
 #bouttonanglais span {
@@ -45,21 +45,24 @@ justify-content: space-around;
   position: relative;
   transition: 0.5s;
 }
+
 #bouttonanglais span:after {
   content: "\00bb";
   position: absolute;
-  z-index: 1;
   opacity: 0;
   top: 0;
   right: -20px;
   transition: 0.5s;
 }
+
 #bouttonanglais:hover {
   background-color: #1e4f96;
 }
+
 #bouttonanglais:hover span {
   padding-right: 25px;
 }
+
 #bouttonanglais:hover span:after {
   opacity: 1;
   right: 0;
@@ -137,7 +140,7 @@ justify-content: space-around;
 .check-with-label:checked + .radiobuttun {
 background-color: #1e4f96;
 color:#eeeeee;
-
+width: 100%;
 }
 
 .radiobuttun2 {
@@ -199,5 +202,11 @@ color:#eeeeee;
   #buttunnext {
     width: 150px;
     font-size: 13px;
+  }
+  .radiobuttun2{
+    font-weight:lighter;
+  }
+  .radiobuttun{
+    font-weight:lighter;
   }
 }

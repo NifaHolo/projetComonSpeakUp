@@ -6,6 +6,16 @@
 <div id="questionnaires">
     <form [formGroup]="form" (ngSubmit)="submit()" class="Mise-en-form">
         <section #grammaire>
+            <span>
+                <h2>Votre nom :</h2>
+                <input class="name" type="text" name="name" formControlName="name" required>
+                
+                <div *ngIf="showforgetAnswer" class="show">
+                    <div class="wrong-answer-text-decoration">
+                        <p *ngIf="name == -1">Nom oublié !</p>
+                    </div>
+                </div>
+            </span>
             <div *ngFor="let question of questions; let i = index" class="grid">
                 <h2> {{question.nom}} </h2>
                 <h3>{{question.grammar}}</h3>
@@ -20,7 +30,7 @@
             <div *ngIf="showAnswer" class="show">
                 <p class="good-answer-text-decoration" *ngIf="question.bonneReponses == question.reponsesUser">Bonne réponse !</p>
                 <p class="wrong-answer-text-decoration"
-                    *ngIf="question.bonneReponses != question.reponsesUser && question.reponsesUser != -1">Mauvaise réponse ! </p>
+                    *ngIf="question.bonneReponses != question.reponsesUser && question.reponsesUser != -1">Mauvaise réponse ! La bonne réponse était : {{question.reponses[question.bonneReponses]}} </p>
             </div>
                 <div *ngIf="showforgetAnswer" class="show">
                         <p *ngIf="question.reponsesUser == -1" class="wrong-answer-text-decoration">Réponse oublié ! </p>
@@ -28,13 +38,13 @@
                 <br>
             </div>
         </section> 
-    </form> 
+    </form>
     <button id="bouttonanglais" [disabled]="showAnswer" type="submit" (click)="submit();" #basdepage>
     <span>Envoyer !</span>
     </button>
     
     <div id="navigationQuestions">
         <button (click)="scroll(grammaire)">Grammar</button><br>
-        <button (click)="scroll(basdepage)">Haut de page</button>
+        <button (click)="scroll(basdepage)">Bas de page</button>
     </div>
 </div>

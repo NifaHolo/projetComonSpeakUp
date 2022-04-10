@@ -36,6 +36,7 @@ const appRoutes: Routes = [
     AudioanglaisComponent,
     PopupComponent,
     
+    
   ],
   imports: [
     BrowserModule,
@@ -44,6 +45,7 @@ const appRoutes: Routes = [
     ReactiveFormsModule,
     MatDialogModule,
     BrowserAnimationsModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent],

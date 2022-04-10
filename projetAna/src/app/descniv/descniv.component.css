@@ -110,9 +110,10 @@ width: 650px;
   color: #deecf3;
 }
 .decouvrir h2 {
-  margin-left: 50px;
   font-size: 30px;
   color: #1e4f96;
+  text-align: center;
+  margin-top:10px;
 }
 .decouvrir h3 {
   margin-left: 50px;

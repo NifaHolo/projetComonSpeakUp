@@ -9,11 +9,13 @@
   grid-template-columns: 80%;
   justify-content: center;
 }
+
 .Placement-buttun{
-display:grid;
-grid-template-columns: 25% 25% 25% 25%;
-justify-content: space-around;
+  display:grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  justify-content: space-around;
 }
+
 .grid{
   background-color: rgb(249, 250, 251);
   border-radius: 15px;
@@ -21,11 +23,10 @@ justify-content: space-around;
   text-align: center;
 }
 
-
-
 .title h1 {
   font-size: 30px;
 }
+
 #bouttonanglais {
   display: inline-block;
   background-color: #1e4f96;
@@ -38,7 +39,6 @@ justify-content: space-around;
   transition: all 0.5s;
   cursor: pointer;
   margin: auto;
-  
 }
 
 #bouttonanglais span {
@@ -47,6 +47,7 @@ justify-content: space-around;
   position: relative;
   transition: 0.5s;
 }
+
 #bouttonanglais span:after {
   content: "\00bb";
   position: absolute;
@@ -56,16 +57,20 @@ justify-content: space-around;
   right: -20px;
   transition: 0.5s;
 }
+
 #bouttonanglais:hover {
   background-color: #1e4f96;
 }
+
 #bouttonanglais:hover span {
   padding-right: 25px;
 }
+
 #bouttonanglais:hover span:after {
   opacity: 1;
   right: 0;
 }
+
 .title {
   position: flex;
   margin-top: 5%;
@@ -75,7 +80,6 @@ justify-content: space-around;
   font-size: 25px;
 }
 
-
 .radiobuttun {
   color: #1e4f96;
   display: inline-block;
@@ -83,16 +87,15 @@ justify-content: space-around;
   cursor: pointer;
   font-weight: bold;
   padding: 5px 20px;
-
 }
+
 .check-with-label{ 
-    display: none;
-
+  display: none;
 }
-.check-with-label:checked + .radiobuttun {
-background-color: #1e4f96;
-color:#eeeeee;
 
+.check-with-label:checked + .radiobuttun {
+  background-color: #1e4f96;
+  color:#eeeeee;
 }
 
 .title {
@@ -100,7 +103,6 @@ color:#eeeeee;
   margin-top: 5%;
   text-align: center;
   color: #1e4f96;
-
   font-size: 25px;
 }
 
@@ -110,12 +112,13 @@ color:#eeeeee;
   text-align: center;
 }
 .good-answer-text-decoration{
- color:green;
+  color:green;
 }
 
 .wrong-answer-text-decoration{
- color:rgb(241, 105, 71);
+  color:rgb(241, 105, 71);
 }
+
 #navigationQuestions{
   display: inline-block;
   position: fixed;
@@ -126,6 +129,7 @@ color:#eeeeee;
   right: 0; 
   width:150px;
 }
+
 #navigationQuestions button
 {
   width: 100px;
@@ -135,10 +139,17 @@ color:#eeeeee;
   border: none;
   margin-top: 5px;
 }
+
 @media screen and (max-width: 600px) {
   #bouttonanglais {
     width: 150px;
     font-size: 15px;
   }
-
+  .radiobuttun2 {
+    font-weight: lighter;
+  }
+  
+  .radiobuttun {
+    font-weight: lighter;
+  }
 }

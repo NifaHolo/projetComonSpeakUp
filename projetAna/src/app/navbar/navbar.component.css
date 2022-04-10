@@ -309,11 +309,12 @@ line-height: 50px;
     transform: rotate(-45deg) translate(104px, 41px);
   }
   #menuToggle input{
-   right: 190px;
-   width: 150px;
+right: 190px;
+width: 102px;
+height: 32px;
   }
   #menu{
-    width: 150px;
+    width: 130px;
   }
   #menuToggle input:checked ~ span {
     opacity: 1;
@@ -333,8 +334,9 @@ line-height: 50px;
   .confiance{
     margin-top: 200px;
   }
+  
   }
-  @media screen and (max-width: 360px) {
+  @media screen and (max-width: 400px) {
   .ulNavBar{
     float: none;
     font-size: 11px;
@@ -342,7 +344,8 @@ line-height: 50px;
   }
   .ulNavBar a {font-size: 11px;}
   #menuToggle input{
-    right: 139px;
-    width: 113px;
+right: 190px;
+width: 102px;
+height: 32px;
   }
   }
