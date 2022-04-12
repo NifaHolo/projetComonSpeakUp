@@ -304,4 +304,29 @@ width: 650px;
     margin-top: 500px;
    
   }
+  #bouttonanglais:hover {
+    display: none;
+    
+  }
+  #bouttonesp:hover{
+    display: none;
+  }
+}
+@media screen and (max-width: 400px) {
+ 
+    #bouttonanglais {
+      width: 115px;
+      font-size: 10px;
+    }
+  #bouttonesp {
+    width: 115px;
+    font-size: 10px;
+  }
+  
+  .decouvrir {
+    width: 90%;
+    margin-bottom: 25px;
+    margin-top: 580px;
+  }
+
 }

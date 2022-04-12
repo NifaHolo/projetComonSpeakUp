@@ -7,6 +7,7 @@ FormControl,
 ValidatorFn
 } from '@angular/forms';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { ToastrService } from 'ngx-toastr';
 import { PopupComponent } from './popup/popup.component';
 declare let Email: any;
 
@@ -426,14 +427,16 @@ export class QuestionnaireespComponent implements OnInit {
 
   form: FormGroup;
 
-  constructor(private formBuilder: FormBuilder, public dialog: MatDialog) {
+  constructor(private formBuilder: FormBuilder, public dialog: MatDialog, private toastr: ToastrService) {
     var objet = this.createArrayForm();
     console.log(objet)
     this.form = this.formBuilder.group(
       objet
     );
   }
-
+  showforget() {
+    this.toastr.warning("vous avez oublier votre nom ou de répondre à une question.");
+  }
   createArrayForm ()
   {
     //initialisation de l'objet form, contient une propriété pour chaque question vocab + grammaire et name
@@ -476,7 +479,7 @@ export class QuestionnaireespComponent implements OnInit {
     //Si au moins une répones n'est pas saisie alors on affiche pas les résultats
     this.showAnswer = this.showforgetAnswer == true ? false : true;
     if (this.showAnswer != true) {
-      alert("vous avez oublier votre nom ou de répondre à une question.");
+      this.showforget();
     }
     //si toutes les réponses ne sont pas vide 
     if (this.showAnswer == true) {

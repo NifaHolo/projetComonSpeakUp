@@ -12,6 +12,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatDialogModule } from '@angular/material/dialog';
 import { PopupComponent } from './questionnaire/popup/popup.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CommonModule } from '@angular/common';
+import { ToastrModule } from 'ngx-toastr';
+
 
 
 const appRoutes: Routes = [
@@ -45,6 +48,7 @@ const appRoutes: Routes = [
     ReactiveFormsModule,
     MatDialogModule,
     BrowserAnimationsModule,
+    ToastrModule.forRoot(),
 
   ],
   providers: [],

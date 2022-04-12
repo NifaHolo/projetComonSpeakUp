@@ -1,5 +1,5 @@
 import { formatNumber } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import {
 FormBuilder,
 FormGroup,
@@ -9,6 +9,7 @@ FormControl,
 ValidatorFn
 } from '@angular/forms';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { ToastrService } from 'ngx-toastr';
 import { PopupComponent } from './popup/popup.component';
 declare let Email: any;
 
@@ -608,13 +609,18 @@ declare let Email: any;
 
   form: FormGroup;
 
-  constructor(private formBuilder: FormBuilder, public dialog: MatDialog) {
+  constructor(private formBuilder: FormBuilder, public dialog: MatDialog, private toastr: ToastrService) {
     var form = this.createArrayForm();
     this.form = this.formBuilder.group(
     form, 
     );
+ 
   }
-
+  @ViewChild('bouttonanglais')
+  bouttonanglais!: ElementRef;
+  showforget() {
+    this.toastr.warning("vous avez oublier votre nom ou de répondre à une question.");
+  }
   //permet de scroller a un élément avec une animation
   scroll(el: HTMLElement) {
     el.scrollIntoView({ behavior: 'smooth' });
@@ -668,12 +674,14 @@ declare let Email: any;
       else
       this.showforgetAnswer = true;
     }
+    
     //Si au moins une répones n'est pas saisie alors on affiche pas les résultats
     this.showAnswer = this.showforgetAnswer == true ? false : true;
     if (this.showAnswer != true) {
-      alert("vous avez oublier votre nom ou de répondre à une question.");
+      this.showforget();
     }
     if (this.showAnswer == true) {
+
     var acc_good_answer = 0;
     var acc_good_answer2 = 0;
     //parcoure les questions vocab et regarde si reponsesUser est égale a bonneReponses

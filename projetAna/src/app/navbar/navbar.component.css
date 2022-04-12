@@ -309,8 +309,8 @@ line-height: 50px;
     transform: rotate(-45deg) translate(104px, 41px);
   }
   #menuToggle input{
-right: 190px;
-width: 102px;
+right: 180px;
+width: 115px;
 height: 32px;
   }
   #menu{
@@ -344,8 +344,34 @@ height: 32px;
   }
   .ulNavBar a {font-size: 11px;}
   #menuToggle input{
-right: 190px;
-width: 102px;
+right: 150px;
+width: 120px;
 height: 32px;
   }
   }
+  @media screen and (max-width: 340px) {
+    .ulNavBar{
+      float: none;
+      font-size: 11px;
+  
+    }
+    .ulNavBar a {font-size: 11px;}
+    #menuToggle input{
+  right: 120px;
+  width: 120px;
+  height: 32px;
+    }
+    }
+    @media screen and (max-width: 300px) {
+      .ulNavBar{
+        float: none;
+        font-size: 11px;
+    
+      }
+      .ulNavBar a {font-size: 11px;}
+      #menuToggle input{
+    right: 75px;
+    width: 120px;
+    height: 32px;
+      }
+      }

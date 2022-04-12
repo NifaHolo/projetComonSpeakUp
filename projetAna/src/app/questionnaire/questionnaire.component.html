@@ -53,20 +53,20 @@
                 <div class="Placement-buttun">
                     <div *ngFor="let reponse2 of question2.reponses; let y = index">
                         <input type="radio" name="Q2_{{i +1}}" value="{{y}}" formControlName="Q2_{{i +1}}" class="check-with-label2" id="idinput2{{y}}{{i}}" required="required">
-                        <label class="radiobuttun2" for="idinput2{{y}}{{i}}">
+                        <label class="radiobuttun2" for="idinput2{{y}}{{i}}" >
                             {{reponse2}}
                         </label>
                     </div>
                 </div>
-                <div *ngIf="showAnswer">
+                <div *ngIf="showAnswer" >
                     <p *ngIf="question2.bonneReponses == question2.reponsesUser" class="good-answer-text-decoration">Bonne réponse !</p>
                 </div>
-                <div *ngIf="showforgetAnswer" class="show">
+                <div *ngIf="showforgetAnswer" class="show" >
                     <div class="wrong-answer-text-decoration">
                         <p *ngIf="question2.reponsesUser == -1">Réponse oublié ! </p>
                     </div>
                 </div>
-                <div *ngIf="showAnswer" class="show">
+                <div *ngIf="showAnswer" class="show" >
                     <div class="wrong-answer-text-decoration">
                         <p *ngIf="question2.bonneReponses != question2.reponsesUser && question2.reponsesUser != -1">Mauvaise réponse ! La bonne réponse était : {{question2.reponses[question2.bonneReponses]}}</p>
                     </div>
@@ -77,13 +77,13 @@
 
   
     </form>
-
+            <p #basdepage></p>
             <!-- disable le bouton quand cliquer -->
-            <button id="bouttonanglais" [disabled]="showAnswer" type="submit" (click)="submit();" #basdepage>
+            <button id="bouttonanglais" [disabled]="showAnswer" type="submit" (click)="submit();" *ngIf="showAnswer == false"  >
                 <span>Envoyer !</span>
             </button>
 
-            <div id="bouttonanglais" *ngIf="showAnswer" class="show">
+            <div id="" *ngIf="showAnswer" class="show" >
                 <a href="audioanglais">
                     <button id="buttunnext" >
                         <span>Next</span>

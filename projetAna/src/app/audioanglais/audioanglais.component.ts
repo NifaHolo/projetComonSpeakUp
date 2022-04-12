@@ -7,6 +7,7 @@ import {
   ValidatorFn
 } from '@angular/forms';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { ToastrService } from 'ngx-toastr';
 import { PopupComponent } from './popup/popup.component';
 declare let Email: any;
 
@@ -82,7 +83,7 @@ export class AudioanglaisComponent implements OnInit {
     },
   ]
   form: FormGroup;
-  constructor(private formBuilder: FormBuilder, public dialog: MatDialog) {
+  constructor(private formBuilder: FormBuilder, public dialog: MatDialog, private toastr: ToastrService) {
 
     var form = this.createArrayForm();
 
@@ -91,6 +92,9 @@ export class AudioanglaisComponent implements OnInit {
       form,
     );
 
+  }
+  showforget() {
+    this.toastr.warning("vous avez oublier votre nom ou de répondre à une question.");
   }
   createArrayForm() {
 
@@ -128,7 +132,7 @@ export class AudioanglaisComponent implements OnInit {
 
     this.showAnswer = this.showforgetAnswer == true ? false : true;
     if (this.showAnswer != true) {
-      alert("vous avez oublier votre nom ou de répondre à une question.");
+      this.showforget();
     }
     if (this.showAnswer == true) {
 

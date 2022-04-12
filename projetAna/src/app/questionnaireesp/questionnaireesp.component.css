@@ -3,7 +3,9 @@
   color: #1e4f96;
   text-align: center;
 }
-
+.name{
+  margin-bottom: 20px;
+}
 .Mise-en-form{
   display: grid;
   grid-template-columns: 80%;
@@ -122,11 +124,10 @@
 #navigationQuestions{
   display: inline-block;
   position: fixed;
-  top:88%;
-  right: 0;
+  top:87%;
+  left: 0;
   text-align: center;
   transform: translate(0%, -50%); 
-  right: 0; 
   width:150px;
 }
 
@@ -151,5 +152,19 @@
   
   .radiobuttun {
     font-weight: lighter;
+  }
+}
+@media screen and (max-width: 400px) {
+  #bouttonanglais {
+    width: 150px;
+    font-size: 15px;
+  }
+  .radiobuttun2 {
+    font-size: 10px;
+  }
+  
+  .radiobuttun {
+    font-size: 10px;
+
   }
 }
